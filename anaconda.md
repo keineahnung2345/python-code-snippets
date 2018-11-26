@@ -1,6 +1,21 @@
 # anaconda-scripts
 Some useful anaconda scripts
 
+## list all environments
+```sh
+conda env list
+```
+
+## create an environment
+```sh
+conda create -n <env-name> python=<python-version>
+```
+
+## remove an environment
+```sh
+conda env remove -n <env-name>
+```
+
 ## show the config of anaconda
 ```sh
 conda config --show
