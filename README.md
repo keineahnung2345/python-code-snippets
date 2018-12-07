@@ -12,3 +12,10 @@ import h5py
 f = h5py.File('<your-weight-file>.h5', 'r')
 list(f.keys())
 ```
+
+## to use IPython magic in a script file
+```python
+from IPython import get_ipython
+ipython = get_ipython()
+ipython.magic("matplotlib qt5") # show up a window when drawing with matplotlib
+```
