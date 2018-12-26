@@ -24,3 +24,14 @@ ipython.magic("matplotlib qt5") # show up a window when drawing with matplotlib
 ```python
 inv_map = {v: k for k, v in map.items()}
 ```
+
+## sort a dict by key or value
+To sort by key, use `key=operator.itemgetter(0)`; to sort by value, use `key=operator.itemgetter(1)`
+
+`reverse=False` for ascending, `reverse=True` for descending
+```python
+import operator
+d = {'math': 99, 'english': 80, 'chemistry': 67, 'biology': 88, 'physics': 93}
+sorted_d = sorted(d.items(), key=operator.itemgetter(0), reverse=True)
+sorted_d
+```
