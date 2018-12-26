@@ -19,3 +19,8 @@ from IPython import get_ipython
 ipython = get_ipython()
 ipython.magic("matplotlib qt5") # show up a window when drawing with matplotlib
 ```
+
+## invert a dict mapping
+```python
+inv_map = {v: k for k, v in map.items()}
+```
