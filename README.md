@@ -1,6 +1,12 @@
 # python-code-snippets
 Some useful python code snippets
 
+## detect python version inside python kernel
+```python
+import sys
+sys.version_info
+```
+
 ## to remove non-ascii characters from a string
 ```python
 s = s.encode('ascii', errors='ignore').decode()
