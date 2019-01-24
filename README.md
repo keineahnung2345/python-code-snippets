@@ -41,3 +41,32 @@ d = {'math': 99, 'english': 80, 'chemistry': 67, 'biology': 88, 'physics': 93}
 sorted_d = sorted(d.items(), key=operator.itemgetter(0), reverse=True)
 sorted_d
 ```
+
+## get parent class of a class
+```python
+<classname>.__bases__
+```
+
+Example:
+```python
+UnicodeDecodeError.__bases__ #(UnicodeError,)
+```
+
+## get all parent classes of a class
+```python
+import inspect
+inspect.getmro(<classname>)
+```
+
+Example:
+```python
+inspect.getmro(UnicodeDecodeError)
+"""
+(UnicodeDecodeError,
+ UnicodeError,
+ ValueError,
+ Exception,
+ BaseException,
+ object)
+"""
+```
