@@ -49,6 +49,13 @@ d = {'math': 99, 'english': 80, 'chemistry': 67, 'biology': 88, 'physics': 93}
 pprint.pprint(d, width=1)
 ```
 
+## random sample from a dict
+```python
+import random
+d = {'math': 99, 'english': 80, 'chemistry': 67, 'biology': 88, 'physics': 93}
+dict(random.sample(d.items(), 2))
+```
+
 ## get parent class of a class
 ```python
 <classname>.__bases__
