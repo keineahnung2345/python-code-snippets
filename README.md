@@ -42,6 +42,13 @@ sorted_d = sorted(d.items(), key=operator.itemgetter(0), reverse=True)
 sorted_d
 ```
 
+## pretty print a dict
+```python
+import pprint
+d = {'math': 99, 'english': 80, 'chemistry': 67, 'biology': 88, 'physics': 93}
+pprint.pprint(d, width=1)
+```
+
 ## get parent class of a class
 ```python
 <classname>.__bases__
