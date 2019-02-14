@@ -102,3 +102,12 @@ np.delete(a, 0)
 # delete by value
 np.delete(a, np.where(a==0))
 ```
+
+## numpy: get indices of N maximum values
+https://stackoverflow.com/questions/6910641/how-do-i-get-indices-of-n-maximum-values-in-a-numpy-array
+```python
+import numpy as np
+N = 3
+x = np.array([4,2,1,3,5])
+np.argsort(x)[-N:][::-1] # array([4, 0, 3])
+```
