@@ -92,3 +92,13 @@ df = pd.DataFrame(columns=["n", "2n", "3n"])
 for i in range(3):
     df.loc[len(df)] = [i, i*2, i*3]
 ```
+
+## numpy: delete element by index/value
+```python
+import numpy as np
+a = np.array([0,0,2,2,4,4])
+# delete by index
+np.delete(a, 0)
+# delete by value
+np.delete(a, np.where(a==0))
+```
