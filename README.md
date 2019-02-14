@@ -84,3 +84,11 @@ inspect.getmro(UnicodeDecodeError)
  object)
 """
 ```
+
+## pandas: append new row
+```python
+import pandas as pd
+df = pd.DataFrame(columns=["n", "2n", "3n"])
+for i in range(3):
+    df.loc[len(df)] = [i, i*2, i*3]
+```
