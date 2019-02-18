@@ -111,3 +111,10 @@ N = 3
 x = np.array([4,2,1,3,5])
 np.argsort(x)[-N:][::-1] # array([4, 0, 3])
 ```
+
+## numpy: set output digit limitation
+https://stackoverflow.com/questions/2891790/how-to-pretty-printing-a-numpy-array-without-scientific-notation-and-with-given
+```python
+import numpy as np
+np.set_printoptions(precision=2)
+```
