@@ -26,6 +26,14 @@ ipython = get_ipython()
 ipython.magic("matplotlib qt5") # show up a window when drawing with matplotlib
 ```
 
+## from two list to a list of tuples
+https://stackoverflow.com/questions/2407398/how-to-merge-lists-into-a-list-of-tuples
+```python
+l1 = [1,2,3]
+l2 = [4,5,6]
+print(list(zip(l1, l2))) #[(1, 4), (2, 5), (3, 6)]
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
