@@ -12,6 +12,18 @@ sys.version_info
 s = s.encode('ascii', errors='ignore').decode()
 ```
 
+## check if a string is english
+https://stackoverflow.com/questions/27084617/detect-strings-with-non-english-characters-in-python
+```python
+def isEnglish(s):
+    try:
+        s.encode(encoding='utf-8').decode('ascii')
+    except UnicodeDecodeError:
+        return False
+    else:
+        return True
+```
+
 ## to check the layers of a hdf5 weight file
 ```python
 import h5py
