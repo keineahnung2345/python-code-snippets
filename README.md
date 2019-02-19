@@ -7,6 +7,13 @@ import sys
 sys.version_info
 ```
 
+## count substring in a string
+```python
+str = "hello, goodbye, and hello"
+substr = "hello"
+print(str.count(substr))
+```
+
 ## to remove non-ascii characters from a string
 ```python
 s = s.encode('ascii', errors='ignore').decode()
