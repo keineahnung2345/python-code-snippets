@@ -34,6 +34,16 @@ l2 = [4,5,6]
 print(list(zip(l1, l2))) #[(1, 4), (2, 5), (3, 6)]
 ```
 
+## convert list of tuples to two lists
+https://stackoverflow.com/questions/8081545/convert-list-of-tuples-to-multiple-lists-in-python
+```python
+l = [(1, 2), (3, 4), (5, 6)]
+z = zip(*[(1, 2), (3, 4), (5, 6)])
+l1, l2 = map(list, z)
+print(l1) #[1, 3, 5]
+print(l2) #[2, 4, 6]
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
