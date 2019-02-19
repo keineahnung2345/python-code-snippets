@@ -101,6 +101,23 @@ for i in range(3):
     df.loc[len(df)] = [i, i*2, i*3]
 ```
 
+## pandas: read csv, combine all last columns
+This helps when the last columns of csv file may contain ','.
+```python
+import csv
+import pandas as pd
+
+def to_n_columns(l, n):
+    return l[:n] + [','.join(l[n:])]
+
+with open('xxx.csv', 'r', encoding='utf-8') as f:
+    reader = csv.reader(f)
+    lines = [line for line in reader]
+    lines = [to_n_columns(line) for line in lines]
+    
+df = pd.DataFrame(lines)
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
