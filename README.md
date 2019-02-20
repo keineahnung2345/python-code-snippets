@@ -7,6 +7,13 @@ import sys
 sys.version_info
 ```
 
+## write list of strings to a file
+```python
+lines = ['abc', 'def']
+with open('xxx.txt', 'w', encoding='utf-8') as f:
+    f.writelines(map(lambda line : line+'\n', lines))
+```
+
 ## count substring in a string
 ```python
 str = "hello, goodbye, and hello"
