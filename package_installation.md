@@ -1,6 +1,18 @@
 # package-installation
 Commands to install python packages
 
+## Install pip
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+```
+
+## Upgrade pip
+```bash
+# python -m pip install -U pip # Windows
+# pip install -U pip # Linux
+```
+
 ## pip search
 pip search: search for PyPI packages whose name or summary contains
 ```bash
