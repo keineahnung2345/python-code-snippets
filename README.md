@@ -7,6 +7,13 @@ import sys
 sys.version_info
 ```
 
+## get the class name of an object
+[Getting the class name of an instance?](https://stackoverflow.com/questions/510972/getting-the-class-name-of-an-instance)
+```python
+s = "x"
+print(s.__class__.__name__)
+```
+
 ## write list of strings to a file
 ```python
 lines = ['abc', 'def']
