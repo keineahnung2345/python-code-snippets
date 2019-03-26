@@ -14,6 +14,12 @@ s = "x"
 print(s.__class__.__name__)
 ```
 
+## logging
+```python
+import logging
+logging.info("hello") #INFO:root:hello
+```
+
 ## write list of strings to a file
 ```python
 lines = ['abc', 'def']
