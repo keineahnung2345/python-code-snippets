@@ -176,6 +176,14 @@ import pandas as pd
 df_norm = (df - df.min())/(df.max() - df.min() + np.finfo(np.float32).eps)
 ```
 
+## pandas: select column names if their max values are smaller than some number
+```python
+import pandas as pd
+
+# df = ...
+df.loc[:,df.max() < 1e-3].columns
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
