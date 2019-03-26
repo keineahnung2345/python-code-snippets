@@ -167,6 +167,14 @@ with open('xxx.csv', 'r', encoding='utf-8') as f:
 df = pd.DataFrame(lines)
 ```
 
+## pandas: normalize a dataframe
+```python
+import pandas as pd
+
+# df = ...
+df_norm = (df - df.min())/(df.max() - df.min())
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
