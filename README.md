@@ -200,3 +200,10 @@ https://stackoverflow.com/questions/2891790/how-to-pretty-printing-a-numpy-array
 import numpy as np
 np.set_printoptions(precision=2)
 ```
+
+## numpy: epsilon
+https://stackoverflow.com/questions/19141432/python-numpy-machine-epsilon
+```python
+print(np.finfo(float).eps)# 2.22044604925e-16
+print(np.finfo(np.float32).eps)# 1.19209e-07
+```
