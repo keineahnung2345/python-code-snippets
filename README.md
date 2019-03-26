@@ -172,7 +172,8 @@ df = pd.DataFrame(lines)
 import pandas as pd
 
 # df = ...
-df_norm = (df - df.min())/(df.max() - df.min())
+# add epsilon to ensure that nan won't appear!
+df_norm = (df - df.min())/(df.max() - df.min() + np.finfo(np.float32).eps)
 ```
 
 ## numpy: delete element by index/value
