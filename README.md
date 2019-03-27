@@ -83,6 +83,14 @@ print(l1) #[1, 3, 5]
 print(l2) #[2, 4, 6]
 ```
 
+## list comprehension with if else
+https://stackoverflow.com/questions/4406389/if-else-in-a-list-comprehension
+```python
+l = [-1, 3, -4, 5, 6, -9]
+l = [x if x >= 0 else 0 for x in l]
+print(l) #[0, 3, 0, 5, 6, 0]
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
