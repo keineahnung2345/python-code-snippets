@@ -192,6 +192,14 @@ import pandas as pd
 df.loc[:,df.max() < 1e-3].columns
 ```
 
+## pandas: exclude columns from dataframe
+```python
+import pandas as pd
+
+# df = ...
+df[df.columns.difference(['column_to_exclude'])]
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
