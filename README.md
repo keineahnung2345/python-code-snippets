@@ -200,6 +200,18 @@ import pandas as pd
 df[df.columns.difference(['column_to_exclude'])]
 ```
 
+## pandas: replace elements in a series with the mode in a rolling window
+```python
+from scipy.stats import mode
+import pandas as pd
+
+w_size = 5
+s = pd.Series([0,0,0,1,0,0,2,2,2,2,0,1,2,2,0])
+s = s.rolling(w_size).apply(lambda x: mode(x)[0], raw=False)
+s[:w_size] = s[w_size]
+print(s.tolist()) # [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 0.0]
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
