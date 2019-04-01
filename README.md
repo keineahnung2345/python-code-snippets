@@ -244,3 +244,12 @@ https://stackoverflow.com/questions/19141432/python-numpy-machine-epsilon
 print(np.finfo(float).eps)# 2.22044604925e-16
 print(np.finfo(np.float32).eps)# 1.19209e-07
 ```
+
+## numpy: count occurrences of unique elements
+https://stackoverflow.com/questions/28663856/how-to-count-the-occurrence-of-certain-item-in-an-ndarray-in-python
+```python
+a = np.array([0, 3, 0, 1, 0, 1, 2, 1, 0, 0, 0, 0, 1, 3, 4])
+unique, counts = np.unique(a, return_counts=True)
+print(unique) # array([0, 1, 2, 3, 4])
+print(counts) # array([7, 4, 1, 2, 1], dtype=int64)
+```
