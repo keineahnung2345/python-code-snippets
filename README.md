@@ -20,6 +20,13 @@ import logging
 logging.info("hello") #INFO:root:hello
 ```
 
+## read file with chinese in Windows
+use `utf-8-sig` encoding so that the first line won't be prefixed with `\ufeff`
+```python
+with open('stop_words.txt', 'r', encoding='utf-8-sig') as f:
+    print(f.readlines())
+```
+
 ## write list of strings to a file
 ```python
 lines = ['abc', 'def']
