@@ -212,6 +212,12 @@ s[:w_size] = s[w_size]
 print(s.tolist()) # [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 0.0]
 ```
 
+## pandas: export dataframe with chinese to csv, using correct encoding
+[使用python处理中文csv文件，并让excel正确显示中文（避免乱码）](https://blog.csdn.net/xw_classmate/article/details/51940430)
+```python
+df.to_csv('xxx.csv', index=False, encoding='utf-8-sig')
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
