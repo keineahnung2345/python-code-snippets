@@ -135,6 +135,13 @@ d = {'math': 99, 'english': 80, 'chemistry': 67, 'biology': 88, 'physics': 93}
 dict(random.sample(d.items(), 2))
 ```
 
+## convert all values of a dict to 1
+```python
+d = {0:1, 1:4, 2:7, 3:1, 4:9, 5:2}
+
+print(dict(zip(d.keys(), [1]*len(d))))
+```
+
 ## get parent class of a class
 ```python
 <classname>.__bases__
