@@ -266,3 +266,12 @@ unique, counts = np.unique(a, return_counts=True)
 print(unique) # array([0, 1, 2, 3, 4])
 print(counts) # array([7, 4, 1, 2, 1], dtype=int64)
 ```
+
+## requests: post data
+```python
+import requests
+
+response = requests.post("http://<ip-address>:<port>/<subpage>", 
+                          data={<key>: <val>})
+response = eval(response.text)
+```
