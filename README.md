@@ -105,6 +105,15 @@ count = Counter(['apple','red','apple','red','red','pear'])
 print(dict(count))
 ```
 
+## flatten list of lists to a list
+```python
+ll = [[0, 1, 3, 4, 5], 
+      [0, 1, 2, 3], 
+      [0, 3, 4, 5, 6]]
+
+[e for l in ll for e in l]
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
