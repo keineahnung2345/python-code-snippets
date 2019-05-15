@@ -98,6 +98,13 @@ l = [x if x >= 0 else 0 for x in l]
 print(l) #[0, 3, 0, 5, 6, 0]
 ```
 
+## count the occurence of elements in a list
+```python
+from collections import Counter
+count = Counter(['apple','red','apple','red','red','pear'])
+print(dict(count))
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
