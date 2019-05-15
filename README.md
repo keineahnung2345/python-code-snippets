@@ -119,6 +119,13 @@ ll = [[0, 1, 3, 4, 5],
 inv_map = {v: k for k, v in map.items()}
 ```
 
+## reduce
+```python
+from functools import reduce
+arr = [1, 2, 3, 4, 5]
+reduce(lambda x, y : x+y, arr)
+```
+
 ## sort a dict by key or value
 To sort by key, use `key=operator.itemgetter(0)`; to sort by value, use `key=operator.itemgetter(1)`
 
