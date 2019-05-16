@@ -307,6 +307,13 @@ print(unique) # array([0, 1, 2, 3, 4])
 print(counts) # array([7, 4, 1, 2, 1], dtype=int64)
 ```
 
+## numpy: convert an array of array(from pandas dataframe) to a 2-D array
+```python
+df = pd.DataFrame({"vector" : [np.array([1,2,3]), np.array([4,5,6]), np.array([7,8,9])]})
+print(df["vector"].values.shape) #(3,)
+print(np.array(list(df["vector"].values)).shape) #(3,3)
+```
+
 ## requests: post data
 ```python
 import requests
