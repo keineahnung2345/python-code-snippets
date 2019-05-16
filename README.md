@@ -255,6 +255,16 @@ print(s.tolist()) # [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 2.0, 2.0,
 df.to_csv('xxx.csv', index=False, encoding='utf-8-sig')
 ```
 
+## pandas: one dataframe has a column of type list, to filter out specific elements in the lists in this dataframe
+```python
+stop_words = ["你", "我", "他"]
+df = pd.DataFrame({"words" : [["我", "很", "好"], 
+                                   ["你", "是", "誰"],
+                                   ["他", "天天", "運動"]]})
+
+df["words"].apply(lambda x : list(filter(lambda x: x not in stop_words, x)))
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
