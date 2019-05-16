@@ -329,6 +329,13 @@ print(df["vector"].values.shape) #(3,)
 print(np.array(list(df["vector"].values)).shape) #(3,3)
 ```
 
+## numpy: concatenate two 1-D array
+```python
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+print(np.concatenate([a,b]))
+```
+
 ## requests: post data
 ```python
 import requests
