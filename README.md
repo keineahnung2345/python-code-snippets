@@ -114,6 +114,14 @@ ll = [[0, 1, 3, 4, 5],
 [e for l in ll for e in l]
 ```
 
+## find duplicate elements in a list
+[Identify duplicate values in a list in Python](https://stackoverflow.com/questions/11236006/identify-duplicate-values-in-a-list-in-python)
+```python
+from collections import Counter
+mylist = [20, 30, 25, 20]
+print([k for k,v in Counter(mylist).items() if v>1]) # [20]
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
