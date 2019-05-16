@@ -351,6 +351,12 @@ b = np.array([4,5,6])
 print(np.concatenate([a,b]))
 ```
 
+## numpy: find index of nonzero elements
+```python
+arr = np.array([0, 0, 0, 1, 2, 0, 0, 0, 3, 0, 0])
+print(np.nonzero(arr)) #(array([3, 4, 8], dtype=int64),)
+```
+
 ## requests: post data
 ```python
 import requests
