@@ -256,6 +256,7 @@ df.to_csv('xxx.csv', index=False, encoding='utf-8-sig')
 ```
 
 ## pandas: one dataframe has a column of type list, to filter out specific elements in the lists in this dataframe
+[Find element's index in pandas Series](https://stackoverflow.com/questions/18327624/find-elements-index-in-pandas-series)
 ```python
 stop_words = ["你", "我", "他"]
 df = pd.DataFrame({"words" : [["我", "很", "好"], 
@@ -263,6 +264,13 @@ df = pd.DataFrame({"words" : [["我", "很", "好"],
                                    ["他", "天天", "運動"]]})
 
 df["words"].apply(lambda x : list(filter(lambda x: x not in stop_words, x)))
+```
+
+## pandas: find the index of an element in a series
+```python
+import pandas as pd
+myseries = pd.Series([1,4,0,7,5])
+print(myseries[myseries==7].index[0]) # 3
 ```
 
 ## numpy: delete element by index/value
