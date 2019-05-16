@@ -273,6 +273,13 @@ myseries = pd.Series([1,4,0,7,5])
 print(myseries[myseries==7].index[0]) # 3
 ```
 
+## pandas: merge two dataframes, on different columns
+```python
+df1 = pd.DataFrame({"id1" : [1,2,3], "value": [0, 0, 0]})
+df2 = pd.DataFrame({"id2" : [1,2,3], "value": [-1, -1, -1]})
+print(pd.merge(df1, df2, left_on="id1", right_on="id2"))
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
