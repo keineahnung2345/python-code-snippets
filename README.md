@@ -288,6 +288,13 @@ df2 = pd.DataFrame({"id2" : [1,2,3], "value": [-1, -1, -1]})
 print(pd.merge(df1, df2, left_on="id1", right_on="id2"))
 ```
 
+## pandas: combine columns of text in a dataframe
+[Combine two columns of text in dataframe in pandas/python](https://stackoverflow.com/questions/19377969/combine-two-columns-of-text-in-dataframe-in-pandas-python)
+```python
+df = pd.DataFrame({'Year': ['2014', '2015'], 'quarter': ['q1', 'q2']})
+df['period'] = df[['Year', 'quarter']].apply(lambda x: ''.join(x), axis=1)
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
