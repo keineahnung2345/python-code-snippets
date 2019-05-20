@@ -335,6 +335,17 @@ David      2
 """
 ```
 
+## pandas: filter string based on its length
+```python
+df = pd.DataFrame({"name": ["Ann", "Brian", "Cinderella", "David"], "score": [90, 85, 76, 86]})
+mask = (df['name'].str.len() < 5)
+print(df.loc[mask])
+"""
+  name  score
+0  Ann     90
+"""
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
