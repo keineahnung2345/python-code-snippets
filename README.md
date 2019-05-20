@@ -321,6 +321,20 @@ print(df.drop_duplicates(subset="name", keep="last"))
 """
 ```
 
+## pandas: count elements in a column
+```python
+df = pd.DataFrame({"name": ["Annie", "Brian", "Cindy", "David", "David"], "score": [90, 85, 76, 86, 87]})
+print(df.groupby("name").count())
+"""
+       score
+name        
+Annie      1
+Brian      1
+Cindy      1
+David      2
+"""
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
