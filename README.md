@@ -295,6 +295,19 @@ df = pd.DataFrame({'Year': ['2014', '2015'], 'quarter': ['q1', 'q2']})
 df['period'] = df[['Year', 'quarter']].apply(lambda x: ''.join(x), axis=1)
 ```
 
+## pandas: select rows from dataframe where column_name not in a list
+```python
+df = pd.DataFrame({'countries':['US','UK','Germany','China']})
+countries = ['UK','China']
+
+print(df[~df['countries'].isin(countries)])
+"""
+  countries
+0        US
+2   Germany
+"""
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
