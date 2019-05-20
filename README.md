@@ -308,6 +308,19 @@ print(df[~df['countries'].isin(countries)])
 """
 ```
 
+## pandas: remove duplicated row by looking at a column
+```python
+df = pd.DataFrame({"name": ["Annie", "Brian", "Cindy", "David", "David"], "score": [90, 85, 76, 86, 87]})
+print(df.drop_duplicates(subset="name", keep="last"))
+"""
+    name  score
+0  Annie     90
+1  Brian     85
+2  Cindy     76
+4  David     87
+"""
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
