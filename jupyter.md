@@ -21,3 +21,13 @@ jupyter notebook list
 ```sh
 jupyter notebook stop <your-port>
 ```
+
+## Use tqdm in jupyter notebook
+```sh
+from tqdm import tqdm_notebook as tqdm
+```
+
+## Use matplotlib in jupyter notebook
+```sh
+%matplotlib notebook
+```
