@@ -39,3 +39,10 @@ pip install jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 jupyter nbextension enable spellchecker/main
 ```
+
+## Show differences between jupyter notebooks
+[jupyter/nbdime](https://github.com/jupyter/nbdime)
+```sh
+pip install nbdime
+nbdiff a.ipynb b.ipynb
+```
