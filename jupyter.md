@@ -23,11 +23,19 @@ jupyter notebook stop <your-port>
 ```
 
 ## Use tqdm in jupyter notebook
-```sh
+```py
 from tqdm import tqdm_notebook as tqdm
 ```
 
 ## Use matplotlib in jupyter notebook
-```sh
+```py
 %matplotlib notebook
+```
+
+## Jupyter notebook spell checking
+[Spell checking in Jupyter notebook markdown cells](http://qingkaikong.blogspot.com/2018/09/spell-checking-in-jupyter-notebook.html)
+```sh
+pip install jupyter_contrib_nbextensions
+jupyter contrib nbextension install --user
+jupyter nbextension enable spellchecker/main
 ```
