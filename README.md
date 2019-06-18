@@ -416,3 +416,11 @@ response = requests.post("http://<ip-address>:<port>/<subpage>",
                           data={<key>: <val>})
 response = eval(response.text)
 ```
+
+## glob: to search recursively across sub-folders
+[How can I search sub-folders using glob.glob module?](https://stackoverflow.com/questions/14798220/how-can-i-search-sub-folders-using-glob-glob-module)
+```python
+from glob import glob
+
+glob("/base_dir/**/*.txt", recursive=True)
+```
