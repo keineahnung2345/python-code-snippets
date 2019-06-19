@@ -263,6 +263,13 @@ print(s.tolist()) # [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 2.0, 2.0,
 df.to_csv('xxx.csv', index=False, encoding='utf-8-sig')
 ```
 
+## pandas: append to a csv file
+[How to add pandas data to an existing csv file?](https://stackoverflow.com/questions/17530542/how-to-add-pandas-data-to-an-existing-csv-file)
+```python
+df.to_csv('xxx.csv', mode='a', header=False, index=False)
+df.to_csv('xxx.csv', mode='a', header=False, index=False)
+```
+
 ## pandas: one dataframe has a column of type list, to filter out specific elements in the lists in this dataframe
 [Find element's index in pandas Series](https://stackoverflow.com/questions/18327624/find-elements-index-in-pandas-series)
 ```python
