@@ -408,6 +408,14 @@ arr = np.array([0, 0, 0, 1, 2, 0, 0, 0, 3, 0, 0])
 print(np.nonzero(arr)) #(array([3, 4, 8], dtype=int64),)
 ```
 
+## numpy: remove NaN from an array
+```python
+import numpy as np
+
+a = np.array([1, np.nan, 3, 4])
+print(a[~np.isnan(a)]) # array([1., 3., 4.])
+```
+
 ## requests: post data
 ```python
 import requests
