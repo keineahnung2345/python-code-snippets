@@ -439,3 +439,10 @@ from glob import glob
 
 glob("/base_dir/**/*.txt", recursive=True)
 ```
+
+## use tqdm with enumerate
+```python
+l = ['a', 'b', 'c']
+for i, e in enumerate(tqdm(l)):
+    print(i, e)
+```
