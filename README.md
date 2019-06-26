@@ -446,3 +446,26 @@ l = ['a', 'b', 'c']
 for i, e in enumerate(tqdm(l)):
     print(i, e)
 ```
+
+## opencv: from video into images
+[Python - Extracting and Saving Video Frames](https://stackoverflow.com/questions/33311153/python-extracting-and-saving-video-frames)
+
+```python
+import cv2
+import os
+
+video_name = "xxx"
+if not os.path.isdir(video_name):
+    os.makedirs(video_name)
+
+vidcap = cv2.VideoCapture('{}.mp4'.format(video_name))
+
+success, image = vidcap.read()
+count = 0
+
+while success:
+    cv2.imwrite("{}/frame{}.jpg".format(video_name, count), image)     # save frame as JPEG file      
+    success,image = vidcap.read()
+    print('Read a new frame: ', success)
+    count += 1
+```
