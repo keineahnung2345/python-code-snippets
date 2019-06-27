@@ -72,6 +72,17 @@ ipython = get_ipython()
 ipython.magic("matplotlib qt5") # show up a window when drawing with matplotlib
 ```
 
+## to show image in jupyter notebook
+```python
+import cv2
+import matplotlib.pyplot as plt
+# load image using cv2....and do processing.
+image = cv2.imread('xxx.jpg')
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+# as opencv loads in BGR format by default, we want to show it in RGB.
+plt.show()
+```
+
 ## from two list to a list of tuples
 https://stackoverflow.com/questions/2407398/how-to-merge-lists-into-a-list-of-tuples
 ```python
