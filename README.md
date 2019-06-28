@@ -364,6 +364,17 @@ print(df.loc[mask])
 """
 ```
 
+## pandas/matplotlib: plot histogram for a series
+```python
+fig, ax = plt.subplots()
+ax.title.set_text("xxx")
+df["col"].hist(ax=ax, bins=100)
+ax.set_xscale('log')
+ax.set_yscale('log')
+fig.show()
+fig.savefig('xxx.png')
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
