@@ -177,6 +177,15 @@ d = {0:1, 1:4, 2:7, 3:1, 4:9, 5:2}
 print(dict(zip(d.keys(), [1]*len(d))))
 ```
 
+## defaultdict
+```python
+from collections import defaultdict
+
+d = defaultdict(list)
+d['a'].append(1)
+print(d) #defaultdict(<class 'list'>, {'a': [1]})
+```
+
 ## get parent class of a class
 ```python
 <classname>.__bases__
