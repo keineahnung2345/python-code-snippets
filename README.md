@@ -500,3 +500,15 @@ while success:
     print('Read a new frame: ', success)
     count += 1
 ```
+
+## convert chinese words to pinyin
+First install `pypinyin`:
+```sh
+pip install pypinyin
+```
+Then:
+```python
+from pypinyin import lazy_pinyin
+print(''.join(lazy_pinyin("an-79种-已标")))
+# 'an-79zhong-yibiao'
+```
