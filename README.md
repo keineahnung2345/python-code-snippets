@@ -512,3 +512,11 @@ from pypinyin import lazy_pinyin
 print(''.join(lazy_pinyin("an-79种-已标")))
 # 'an-79zhong-yibiao'
 ```
+
+## copy file
+```sh
+from shutil import copy
+
+# dst can be a filename or directory name
+copy(src, dst)
+```
