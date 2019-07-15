@@ -520,3 +520,9 @@ from shutil import copy
 # dst can be a filename or directory name
 copy(src, dst)
 ```
+
+## to exit a program
+```sh
+import sys
+sys.exit()
+```
