@@ -181,13 +181,20 @@ print(dict(zip(d.keys(), [1]*len(d))))
 ```python
 from collections import defaultdict
 
+# list
 d = defaultdict(list)
 d['a'].append(1)
 print(d) #defaultdict(<class 'list'>, {'a': [1]})
 
+# int
 d2 = defaultdict(lambda : 0)
 d2['a'] += 1
 print(d2) #defaultdict(<function <lambda> at 0x1106c6e18>, {'a': 1})
+
+# int
+d3 = defaultdict(int)
+d3['a'] += 1
+print(d3) #defaultdict(<class 'int'>, {'a': 1})
 ```
 
 ## get parent class of a class
