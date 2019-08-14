@@ -197,6 +197,15 @@ d3['a'] += 1
 print(d3) #defaultdict(<class 'int'>, {'a': 1})
 ```
 
+## add list's elements into a set
+[Python: how to add the contents of an iterable to a set?](https://stackoverflow.com/questions/4045403/python-how-to-add-the-contents-of-an-iterable-to-a-set)
+```python
+s = set()
+l = [1,3,6,3,2]
+s.update(l)
+print(s) # set([1, 2, 3, 6])
+```
+
 ## get parent class of a class
 ```python
 <classname>.__bases__
