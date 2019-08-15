@@ -541,6 +541,14 @@ from shutil import copy
 copy(src, dst)
 ```
 
+## remove directory
+[How do I remove/delete a folder that is not empty with Python?](https://stackoverflow.com/questions/303200/how-do-i-remove-delete-a-folder-that-is-not-empty-with-python)
+```sh
+import shutil
+
+shutil.rmtree('/directory_name')
+```
+
 ## to exit a program
 ```sh
 import sys
