@@ -133,6 +133,17 @@ mylist = [20, 30, 25, 20]
 print([k for k,v in Counter(mylist).items() if v>1]) # [20]
 ```
 
+## random split a list with a given ratio
+```python
+import random
+
+data = list(range(500))
+ratio = 0.9
+random.shuffle(data)
+train_data = data[:int(len(data) * ratio)]
+test_data = data[int(len(data) * ratio):]
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
