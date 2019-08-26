@@ -144,6 +144,12 @@ train_data = data[:int(len(data) * ratio)]
 test_data = data[int(len(data) * ratio):]
 ```
 
+## remove all occurrences of an element in a list
+```python
+l = [1,2,3,2,2,2,3,4]
+print(list(filter(lambda x: x != 2, l))) # [1, 3, 3, 4]
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
