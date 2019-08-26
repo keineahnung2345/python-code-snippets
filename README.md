@@ -571,3 +571,19 @@ shutil.rmtree('/directory_name')
 import sys
 sys.exit()
 ```
+
+## solution to `cannot open shared object file`
+[Why can't Python find shared objects that are in directories in sys.path?](https://stackoverflow.com/questions/1099981/why-cant-python-find-shared-objects-that-are-in-directories-in-sys-path)
+```
+Traceback (most recent call last):
+  File "darknet.py", line 51, in <module>
+    lib = CDLL("../libdarknet.so", RTLD_GLOBAL)
+  File "/usr/local/lib/python3.7/ctypes/__init__.py", line 356, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: libcudart.so.8.0: cannot open shared object file: No such file or directory
+```
+
+Solution: add `LD_LIBRARY_PATH` before `python3`:
+```sh
+LD_LIBRARY_PATH=/usr/local/lib:`pwd` python3 darknet.py
+```
