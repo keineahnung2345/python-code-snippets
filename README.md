@@ -7,6 +7,14 @@ import sys
 sys.version_info
 ```
 
+## check file size
+```python
+import os
+statinfo = os.stat('xxx.txt')
+print(statinfo) # os.stat_result(st_mode=33188, st_ino=6911355, st_dev=16777220, st_nlink=1, st_uid=501, st_gid=20, st_size=26571, st_atime=1565929634, st_mtime=1565346343, st_ctime=1565929634)
+print(statinfo.st_size) # 26571 # the unit is byte
+```
+
 ## get the class name of an object
 [Getting the class name of an instance?](https://stackoverflow.com/questions/510972/getting-the-class-name-of-an-instance)
 ```python
