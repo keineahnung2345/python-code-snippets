@@ -418,6 +418,20 @@ print(df.loc[mask])
 """
 ```
 
+## pandas: group by a pre-defined bins
+[Pandas Groupby Range of Values](https://stackoverflow.com/questions/21441259/pandas-groupby-range-of-values)
+```python
+df = pd.DataFrame({"name": ["Ann", "Brian", "Cinderella", "David", "Eve", "Frank", "Gina", "Helen"], "score": [90, 85, 76, 86, 43, 32, 65, 100]})
+print(df.groupby(pd.cut(df["score"], [0, 60, 70, 80, 90, 100])).groups)
+"""
+{Interval(0, 60, closed='right'): Int64Index([4, 5], dtype='int64'),
+ Interval(60, 70, closed='right'): Int64Index([6], dtype='int64'),
+ Interval(70, 80, closed='right'): Int64Index([2], dtype='int64'),
+ Interval(80, 90, closed='right'): Int64Index([0, 1, 3], dtype='int64'),
+ Interval(90, 100, closed='right'): Int64Index([7], dtype='int64')}
+"""
+```
+
 ## pandas/matplotlib: plot histogram for a series
 ```python
 fig, ax = plt.subplots()
