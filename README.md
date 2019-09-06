@@ -595,23 +595,33 @@ print(''.join(lazy_pinyin("an-79种-已标")))
 ```
 
 ## copy file
-```sh
+```python
 from shutil import copy
 
 # dst can be a filename or directory name
 copy(src, dst)
 ```
 
+## move file
+[How to move a file in Python](https://stackoverflow.com/questions/8858008/how-to-move-a-file-in-python)
+```python
+import os
+import shutil
+
+os.rename("/src/file", "/dst/file")
+shutil.move("/src/file", "/dst/file")
+```
+
 ## remove directory
 [How do I remove/delete a folder that is not empty with Python?](https://stackoverflow.com/questions/303200/how-do-i-remove-delete-a-folder-that-is-not-empty-with-python)
-```sh
+```python
 import shutil
 
 shutil.rmtree('/directory_name')
 ```
 
 ## to exit a program
-```sh
+```python
 import sys
 sys.exit()
 ```
