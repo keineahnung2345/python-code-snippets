@@ -109,6 +109,13 @@ print(l1) #[1, 3, 5]
 print(l2) #[2, 4, 6]
 ```
 
+## max among a list of tuple
+[Find the maximum value in a list of tuples in Python [duplicate]](https://stackoverflow.com/questions/13145368/find-the-maximum-value-in-a-list-of-tuples-in-python)
+```python
+l = [('a', 153), ('b', 827), ('c', 961)]
+print(max(l, key=lambda x : x[1])[0]) # 'c'
+```
+
 ## list comprehension with if else
 https://stackoverflow.com/questions/4406389/if-else-in-a-list-comprehension
 ```python
