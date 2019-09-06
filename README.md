@@ -545,6 +545,13 @@ from glob import glob
 glob("/base_dir/**/*.txt", recursive=True)
 ```
 
+## glob: get hidden files
+[Python 3.6 glob include hidden files and folders](https://stackoverflow.com/questions/49047402/python-3-6-glob-include-hidden-files-and-folders)
+```python
+xmls = glob("tmp/**/*.xml", recursive=True)
+hidden_xmls = glob("tmp/**/.*xml", recursive=True)
+```
+
 ## use tqdm with enumerate
 ```python
 l = ['a', 'b', 'c']
