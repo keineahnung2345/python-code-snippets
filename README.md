@@ -589,6 +589,27 @@ while success:
     count += 1
 ```
 
+## opencv: from images into video(.avi)
+```python
+import cv2
+import os
+import glob
+
+fps = 20
+width, height = (1280,720)
+fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+videoWriter=cv2.VideoWriter("xxx.avi", fourcc, fps, (width, height))
+ 
+imagedir = "/xxx"
+
+for filename in glob.glob(imagedir+"/*.jpg"):
+    frame = cv2.imread(filename)
+    print(filename)
+    videoWriter.write(frame)
+
+videoWriter.release()
+```
+
 ## convert chinese words to pinyin
 First install `pypinyin`:
 ```sh
