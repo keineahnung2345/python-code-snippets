@@ -15,6 +15,13 @@ print(statinfo) # os.stat_result(st_mode=33188, st_ino=6911355, st_dev=16777220,
 print(statinfo.st_size) # 26571 # the unit is byte
 ```
 
+## mkdir -p
+```python
+import os
+# this works even when 'first_layer' doesn't exist
+os.makedirs("first_layer/second_layer")
+```
+
 ## get the class name of an object
 [Getting the class name of an instance?](https://stackoverflow.com/questions/510972/getting-the-class-name-of-an-instance)
 ```python
