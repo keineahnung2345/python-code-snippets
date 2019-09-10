@@ -185,6 +185,8 @@ To sort by key, use `key=operator.itemgetter(0)`; to sort by value, use `key=ope
 import operator
 d = {'math': 99, 'english': 80, 'chemistry': 67, 'biology': 88, 'physics': 93}
 sorted_d = sorted(d.items(), key=operator.itemgetter(0), reverse=True)
+#or using lambda function, this does the same as above
+#sorted_d = sorted(d.items(), key=lambda x : x[0], reverse=True)
 sorted_d
 ```
 
