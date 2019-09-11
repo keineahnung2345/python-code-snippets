@@ -544,6 +544,17 @@ a = np.array([1, np.nan, 3, 4])
 print(a[~np.isnan(a)]) # array([1., 3., 4.])
 ```
 
+## re: search for text between two strings
+[Match text between two strings with regular expression](https://stackoverflow.com/questions/32680030/match-text-between-two-strings-with-regular-expression)
+```python
+import re
+
+s = "onedir/123.xml"
+# this regular expression search for text between '/' and '.'
+# note that '/' and '.' should be escaped by '\'
+re.search(r'\/(.*?)\.', s).group(1) #123
+```
+
 ## requests: post data
 ```python
 import requests
