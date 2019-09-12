@@ -123,6 +123,18 @@ l = [('a', 153), ('b', 827), ('c', 961)]
 print(max(l, key=lambda x : x[1])[0]) # 'c'
 ```
 
+## add two tuples element-wise
+[Python element-wise tuple operations like sum](https://stackoverflow.com/questions/497885/python-element-wise-tuple-operations-like-sum)
+```python
+import operator
+
+a = (1,2,3,4)
+b = (4,3,2,1)
+
+print(tuple(map(operator.add, a, b))) # (5, 5, 5, 5)
+print(tuple(map(operator.sub, a, b))) # (-3, -1, 1, 3)
+```
+
 ## list comprehension with if else
 https://stackoverflow.com/questions/4406389/if-else-in-a-list-comprehension
 ```python
