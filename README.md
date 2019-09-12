@@ -642,6 +642,27 @@ for filename in glob.glob(imagedir+"/*.jpg"):
 videoWriter.release()
 ```
 
+## opencv: draw rectangle
+[Python 與 OpenCV 加入線條圖案與文字教學](https://blog.gtwang.org/programming/opencv-drawing-functions-tutorial/)
+```python
+import cv2
+
+img = cv2.imread("xxx.jpg")
+cv2.rectangle(img, (20, 60), (120, 160), (0, 255, 0), 2)
+cv2.imshow("image", img); cv2.waitKey(0); cv2.destroyAllWindows()
+```
+
+## opencv: crop image
+[How to crop an image in OpenCV using Python](https://stackoverflow.com/questions/15589517/how-to-crop-an-image-in-opencv-using-python)
+```python
+import cv2
+
+img = cv2.imread("xxx.jpg")
+x, y, h, w = 100, 100, 100, 100
+crop_img = img[y:y+h, x:x+w].copy()
+cv2.imshow("cropped", crop_img); cv2.waitKey(0); cv2.destroyAllWindows()
+```
+
 ## convert chinese words to pinyin
 First install `pypinyin`:
 ```sh
