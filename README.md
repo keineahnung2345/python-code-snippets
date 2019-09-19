@@ -498,6 +498,16 @@ fig.show()
 fig.savefig('xxx.png')
 ```
 
+## matplotlib: save image
+```python
+import matplotlib.pyplot as plt
+
+xs = range(10)
+ys = [x*2 for x in xs]
+plt.plot(xs, ys)
+plt.savefig('xxx.png')
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
