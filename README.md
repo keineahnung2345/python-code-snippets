@@ -590,6 +590,7 @@ re.search(r'\/(.*?)\.', s).group(1) #123
 ```
 
 ## re: find all digits, including floating points
+[if i use re.findall How to register in order not to separate the point](https://stackoverflow.com/questions/44703436/if-i-use-re-findall-how-to-register-in-order-not-to-separate-the-point/44703493)
 ```python
 import re
 
