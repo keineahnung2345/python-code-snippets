@@ -567,6 +567,14 @@ s = "onedir/123.xml"
 re.search(r'\/(.*?)\.', s).group(1) #123
 ```
 
+## re: find all digits, including floating points
+```python
+import re
+
+s = "1: 669.557373, 669.557373 avg, 0.000000 rate, 1.819341 seconds, 256 images"
+re.findall("\d+\.\d+|\d+", s) #['1', '669.557373', '669.557373', '0.000000', '1.819341', '256']
+```
+
 ## requests: post data
 ```python
 import requests
