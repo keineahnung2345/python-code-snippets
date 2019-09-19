@@ -288,6 +288,18 @@ inspect.getmro(UnicodeDecodeError)
 """
 ```
 
+## argparse: add positional argument and optional argument
+```python
+import argparse
+  
+parser = argparse.ArgumentParser()
+parser.add_argument("pos1")
+parser.add_argument("-o1", "--optional1", dest="o1")
+args = parser.parse_args()
+pos1 = args.pos1
+o1 = args.o1
+```
+
 ## pandas: append new row
 ```python
 import pandas as pd
