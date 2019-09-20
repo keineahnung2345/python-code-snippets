@@ -143,6 +143,17 @@ l = [x if x >= 0 else 0 for x in l]
 print(l) #[0, 3, 0, 5, 6, 0]
 ```
 
+## nested list comprehension
+[List comprehension on a nested list?](https://stackoverflow.com/questions/18072759/list-comprehension-on-a-nested-list)
+```python
+l = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', '20'], ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], ['100', '100', '100', '100']]
+l = [[int(y) for y in x] for x in l]
+print(l)
+"""
+[[40, 20, 10, 30], [20, 20, 20, 20, 20, 30, 20], [30, 20, 30, 50, 10, 30, 20, 20, 20], [100, 100], [100, 100, 100, 100, 100], [100, 100, 100, 100]]
+"""
+```
+
 ## count the occurence of elements in a list
 ```python
 from collections import Counter
