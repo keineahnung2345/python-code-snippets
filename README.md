@@ -735,6 +735,13 @@ os.rename("/src/file", "/dst/file")
 shutil.move("/src/file", "/dst/file")
 ```
 
+## remove file
+```python
+import os
+
+os.remove("/dirname/filename")
+```
+
 ## remove directory
 [How do I remove/delete a folder that is not empty with Python?](https://stackoverflow.com/questions/303200/how-do-i-remove-delete-a-folder-that-is-not-empty-with-python)
 ```python
