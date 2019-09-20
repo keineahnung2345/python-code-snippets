@@ -498,6 +498,12 @@ for index, row in df.iterrows():
 """
 ```
 
+## pandas: apply a function on two columns of dataframe
+[How to apply a function to two columns of Pandas dataframe](https://stackoverflow.com/questions/13331698/how-to-apply-a-function-to-two-columns-of-pandas-dataframe?answertab=votes#tab-top)
+```python
+df['col_3'] = df[['col_1','col_2']].apply(lambda x: f(*x), axis=1)
+```
+
 ## pandas/matplotlib: plot histogram for a series
 ```python
 fig, ax = plt.subplots()
