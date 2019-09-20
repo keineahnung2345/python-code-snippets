@@ -519,6 +519,24 @@ plt.plot(xs, ys)
 plt.savefig('xxx.png')
 ```
 
+## matplotlib: show image in for loop
+[Can I generate and show a different image during each loop with Matplotlib?](https://stackoverflow.com/questions/11129731/can-i-generate-and-show-a-different-image-during-each-loop-with-matplotlib)
+
+```python
+import cv2
+import matplotlib.pyplot as plt
+
+#fimgs = ['a.jpg', 'b.jpg']
+
+for fimg in fimgs:
+    img = cv2.imread(fimg)
+    plt.figure()
+    plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+    plt.show()
+    _ = input("Press [enter] to continue.") # wait for input from the user
+    plt.close()
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
