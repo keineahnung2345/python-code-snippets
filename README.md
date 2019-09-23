@@ -671,6 +671,17 @@ for i, e in enumerate(tqdm(l)):
     print(i, e)
 ```
 
+## opencv: capture image from camera
+[Capturing a single image from my webcam in Java or Python](https://stackoverflow.com/questions/11094481/capturing-a-single-image-from-my-webcam-in-java-or-python)
+```python
+from cv2 import VideoCapture
+
+# initialize the camera
+cam = VideoCapture(0)   # 0 -> index of camera
+res, img = cam.read()
+cam.release()
+```
+
 ## opencv: from video into images
 [Python - Extracting and Saving Video Frames](https://stackoverflow.com/questions/33311153/python-extracting-and-saving-video-frames)
 
