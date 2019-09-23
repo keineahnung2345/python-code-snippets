@@ -7,6 +7,13 @@ import sys
 sys.version_info
 ```
 
+## check file exist
+```python
+import os
+
+os.path.exists('xxx.txt')
+```
+
 ## check file size
 ```python
 import os
