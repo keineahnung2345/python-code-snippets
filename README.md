@@ -671,7 +671,7 @@ for i, e in enumerate(tqdm(l)):
     print(i, e)
 ```
 
-## opencv: capture image from camera
+## opencv: capture image from camera and then close camera
 [Capturing a single image from my webcam in Java or Python](https://stackoverflow.com/questions/11094481/capturing-a-single-image-from-my-webcam-in-java-or-python)
 ```python
 from cv2 import VideoCapture
@@ -679,7 +679,7 @@ from cv2 import VideoCapture
 # initialize the camera
 cam = VideoCapture(0)   # 0 -> index of camera
 res, img = cam.read()
-cam.release()
+cam.release() # close camera
 ```
 
 ## opencv: from video into images
