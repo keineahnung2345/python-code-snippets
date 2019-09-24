@@ -784,6 +784,13 @@ import os
 os.remove("/dirname/filename")
 ```
 
+## copy directory
+[How do I copy an entire directory of files into an existing directory using Python?](https://stackoverflow.com/questions/1868714/how-do-i-copy-an-entire-directory-of-files-into-an-existing-directory-using-pyth)
+```python
+from distutils.dir_util import copy_tree
+copy_tree("/src/dir", "/dst/dir")
+```
+
 ## remove directory
 [How do I remove/delete a folder that is not empty with Python?](https://stackoverflow.com/questions/303200/how-do-i-remove-delete-a-folder-that-is-not-empty-with-python)
 ```python
