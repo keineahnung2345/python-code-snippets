@@ -321,16 +321,19 @@ inspect.getmro(UnicodeDecodeError)
 """
 ```
 
-## argparse: add positional argument and optional argument
+## argparse: add positional argument and optional argument, argument with default value
+[Python argparse: default value or specified value](https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value)
 ```python
 import argparse
   
 parser = argparse.ArgumentParser()
 parser.add_argument("pos1")
 parser.add_argument("-o1", "--optional1", dest="o1")
+parser.add_argument("-i1", dest="i1", type=int, default=0)
 args = parser.parse_args()
 pos1 = args.pos1
 o1 = args.o1
+i1 = args.i1
 ```
 
 ## pandas: append new row
