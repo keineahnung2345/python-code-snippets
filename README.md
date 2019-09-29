@@ -95,6 +95,39 @@ def isEnglish(s):
         return True
 ```
 
+## find Nth occurrence of a substring in a string
+[Python | Ways to find nth occurrence of substring in a string](https://www.geeksforgeeks.org/python-ways-to-find-nth-occurrence-of-substring-in-a-string/)
+
+In order:
+```python
+s = "a/b/c/d/e"
+val = -1
+for i in range(4):
+    val = s.find('/', val+1)
+    print(val)
+"""
+1
+3
+5
+7
+"""
+```
+
+In reverse order:
+```python
+s = "a/b/c/d/e"
+val = len(s)
+for i in range(4):
+    val = s.rfind('/', 0, val)
+    print(val)
+"""
+7
+5
+3
+1
+"""
+```
+
 ## to check the layers of a hdf5 weight file
 ```python
 import h5py
@@ -176,7 +209,7 @@ print(l)
 """
 ```
 
-## count the occurence of elements in a list
+## count the occurrence of elements in a list
 ```python
 from collections import Counter
 count = Counter(['apple','red','apple','red','red','pear'])
