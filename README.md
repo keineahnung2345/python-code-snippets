@@ -49,6 +49,21 @@ with open('stop_words.txt', 'r', encoding='utf-8-sig') as f:
     print(f.readlines())
 ```
 
+## check if a variable exists
+[How do I check if a variable exists?](https://stackoverflow.com/questions/843277/how-do-i-check-if-a-variable-exists)
+
+To check if `myVar` is one of local variables:
+```python
+if 'myVar' in locals():
+    # myVar exists
+```
+
+To check if `myVar` is one of global variables:
+```python
+if 'myVar' in globals():
+  # myVar exists
+```
+
 ## write list of strings to a file
 ```python
 lines = ['abc', 'def']
