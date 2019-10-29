@@ -700,6 +700,46 @@ response = requests.post("http://<ip-address>:<port>/<subpage>",
 response = eval(response.text)
 ```
 
+## requests: send image
+This can be used with https://github.com/keineahnung2345/cpp-code-snippets/blob/master/crow/imgsave.cpp.
+```python
+import requests
+import base64
+import cv2
+
+"""
+tried the lines starting with '#' but fail
+"""
+
+url = 'http://<ip_address>:<port>/imgsave'
+fimg = open('filename.jpg', 'rb')
+
+#headers = {'Content-type': 'application/json; charset=utf-8', 'Accept': 'text/json'}
+headers = {'Content-type': 'application/json'}
+
+#https://stackoverflow.com/questions/30280495/python-requests-base64-image
+encoded_image = base64.b64encode(fimg.read()).decode('utf-8')
+myobj = {'img': encoded_image}
+
+#img = cv2.imread('filename.jpg')
+# encode image as jpeg
+#_, img_encoded = cv2.imencode('.jpg', img)
+#myobj = {'detect_img': str(img_encoded.tostring())}
+#myobj = {'detect_img': str(encoded_image)}
+#files = {'detect_img': ('filename.jpg', fimg, 'image/jpg', {})}
+
+#x = requests.post(url)
+#x = requests.post(url, data = myobj)
+#x = requests.post(url, data = json.dumps(myobj))
+#x = requests.post(url, data = myobj, headers=headers)
+#x = requests.post(url, files = myobj)
+#x= requests.post(url, json = myobj, headers = headers)
+#x = requests.post(url, files = files, data = {'a':1})
+x= requests.post(url, json = myobj)
+
+print(x.text)
+```
+
 ## glob: to search recursively across sub-folders
 [How can I search sub-folders using glob.glob module?](https://stackoverflow.com/questions/14798220/how-can-i-search-sub-folders-using-glob-glob-module)
 ```python
