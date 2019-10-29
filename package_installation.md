@@ -1,6 +1,11 @@
 # package-installation
 Commands to install python packages
 
+## to accelerate pip install
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple <package_name>
+```
+
 ## Install pip
 ```bash
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
