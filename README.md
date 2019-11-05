@@ -354,6 +354,16 @@ inspect.getmro(UnicodeDecodeError)
 """
 ```
 
+## format string, limit floats
+[Limiting floats to two decimal points](https://stackoverflow.com/questions/455612/limiting-floats-to-two-decimal-points)
+```python
+f = 123.456789
+print("%.2f" % f)
+# 123.46
+print("{0:.2f}".format(f))
+# 123.46
+```
+
 ## argparse: add positional argument and optional argument, argument with default value
 [Python argparse: default value or specified value](https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value)
 ```python
