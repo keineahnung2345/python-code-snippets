@@ -772,6 +772,27 @@ for i, e in enumerate(tqdm(l)):
     print(i, e)
 ```
 
+## use tqdm with while loop
+[Using tqdm progress bar in a while loop](https://stackoverflow.com/questions/45808140/using-tqdm-progress-bar-in-a-while-loop)
+```python
+import random
+import numpy as np
+from tqdm import tqdm
+
+l = list(range(10000))
+pbar = tqdm(total = len(l)) #here!
+
+while len(l) > 0:
+    nsample = np.random.choice([1,2,3], 1, p=[0.45,0.45,0.1])[0]
+    nsample = min(nsample, len(l))
+    sampleds = random.sample(l, nsample)
+    for sampled in sampleds:
+        l.remove(sampled)
+    pbar.update(nsample) #here!
+
+pbar.close() #here!
+```
+
 ## opencv: capture image from camera and then close camera
 [Capturing a single image from my webcam in Java or Python](https://stackoverflow.com/questions/11094481/capturing-a-single-image-from-my-webcam-in-java-or-python)
 ```python
