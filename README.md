@@ -233,6 +233,14 @@ mylist = [20, 30, 25, 20]
 print([k for k,v in Counter(mylist).items() if v>1]) # [20]
 ```
 
+## weighted version of random.choice
+[A weighted version of random.choice](https://stackoverflow.com/questions/3679694/a-weighted-version-of-random-choice)
+```python
+import numpy as np
+
+np.random.choice([1,2,3], 1, p=[0.45,0.45,0.1])[0]
+```
+
 ## random split a list with a given ratio
 ```python
 import random
