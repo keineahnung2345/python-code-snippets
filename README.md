@@ -324,6 +324,14 @@ d3['a'] += 1
 print(d3) #defaultdict(<class 'int'>, {'a': 1})
 ```
 
+## sum up two dict
+[Merge and sum of two dictionaries](https://stackoverflow.com/questions/10461531/merge-and-sum-of-two-dictionaries)
+```python
+d1 = {'a': 100, 'b':200, 'c':400}
+d2 = {'a': 50, 'b': 90, 'c': -100}
+d_sum = {k: d1.get(k, 0) + d2.get(k, 0) for k in set(d1) | set(d2)}
+```
+
 ## add list's elements into a set
 [Python: how to add the contents of an iterable to a set?](https://stackoverflow.com/questions/4045403/python-how-to-add-the-contents-of-an-iterable-to-a-set)
 ```python
