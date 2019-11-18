@@ -22,6 +22,15 @@ print(statinfo) # os.stat_result(st_mode=33188, st_ino=6911355, st_dev=16777220,
 print(statinfo.st_size) # 26571 # the unit is byte
 ```
 
+## check directory size
+[Calculating a directory's size using Python?](https://stackoverflow.com/questions/1392413/calculating-a-directorys-size-using-python)
+```python
+from pathlib import Path
+
+root_directory = Path('.')
+print(sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file() ))
+```
+
 ## mkdir -p
 ```python
 import os
