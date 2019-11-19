@@ -894,6 +894,15 @@ crop_img = img[y:y+h, x:x+w].copy()
 cv2.imshow("cropped", crop_img); cv2.waitKey(0); cv2.destroyAllWindows()
 ```
 
+## convert string to datetime
+```python
+from datetime import datetime
+
+s_time = "17:18:04"
+dt_time = datetime.strptime(s, "%H:%M:%S")
+print(dt_time) #1900-01-01 17:18:04
+```
+
 ## convert chinese words to pinyin
 First install `pypinyin`:
 ```sh
