@@ -903,6 +903,15 @@ dt_time = datetime.strptime(s, "%H:%M:%S")
 print(dt_time) #1900-01-01 17:18:04
 ```
 
+## sum up list of timedelta
+[How to get the sum of timedelta in Python?](https://stackoverflow.com/questions/4049825/how-to-get-the-sum-of-timedelta-in-python)
+```python
+from datetime import timedelta
+
+deltas = [timedelta(seconds=208), timedelta(seconds=123), timedelta(seconds=28)]
+sum(deltas, timedelta()) #datetime.timedelta(seconds=359)
+```
+
 ## convert chinese words to pinyin
 First install `pypinyin`:
 ```sh
