@@ -735,6 +735,16 @@ s = "1: 669.557373, 669.557373 avg, 0.000000 rate, 1.819341 seconds, 256 images"
 re.findall("\d+\.\d+|\d+", s) #['1', '669.557373', '669.557373', '0.000000', '1.819341', '256']
 ```
 
+## re: split with multiple delimeters
+[Split string with multiple delimiters in Python [duplicate]](https://stackoverflow.com/questions/4998629/split-string-with-multiple-delimiters-in-python)
+```python
+import re
+
+s = "0 0.59, 0.73, 0.43, -0.36, 0.00, 0.07, 0.09"
+re.split(" |, ", s)
+# ['0', '0.59', '0.73', '0.43', '-0.36', '0.00', '0.07', '0.09']
+```
+
 ## requests: post data
 ```python
 import requests
