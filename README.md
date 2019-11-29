@@ -873,7 +873,8 @@ while success:
     count += 1
 ```
 
-## opencv: from images into video(.avi)
+## opencv: from images into video(.avi and .mp4)
+[Writing an mp4 video using python opencv](https://stackoverflow.com/questions/30509573/writing-an-mp4-video-using-python-opencv)
 ```python
 import cv2
 import os
@@ -881,7 +882,12 @@ import glob
 
 fps = 20
 width, height = (1280,720)
-fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+
+extension = ".mp4"
+if extension.endswith("avi"):
+    fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+elif extension.endswith("mp4"):
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 videoWriter=cv2.VideoWriter("xxx.avi", fourcc, fps, (width, height))
  
 imagedir = "/xxx"
