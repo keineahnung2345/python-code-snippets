@@ -31,14 +31,16 @@ root_directory = Path('.')
 print(sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file() ))
 ```
 
-## get directory name from file name
+## get directory name & file name from full path
 [Extract a part of the filepath (a directory) in Python](https://stackoverflow.com/questions/10149263/extract-a-part-of-the-filepath-a-directory-in-python)
 ```python
 import os
 
 fname = "/xxx/yyy/zzz/log.txt"
 os.path.dirname(fname) #'/xxx/yyy/zzz'
+os.path.basename(fname) #'log.txt'
 ```
+
 
 ## mkdir -p
 ```python
