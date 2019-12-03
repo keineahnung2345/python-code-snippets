@@ -148,6 +148,14 @@ for i in range(4):
 """
 ```
 
+## string range from a to z
+[Python: how to print range a-z?](https://stackoverflow.com/questions/3190122/python-how-to-print-range-a-z)
+```python
+import string
+print(string.ascii_lowercase)
+# 'abcdefghijklmnopqrstuvwxyz'
+```
+
 ## string to list
 [How to convert a string to a list in Python?](https://stackoverflow.com/questions/5387208/how-to-convert-a-string-to-a-list-in-python/5387227)
 ```python
