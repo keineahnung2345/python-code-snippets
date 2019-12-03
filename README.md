@@ -148,6 +148,13 @@ for i in range(4):
 """
 ```
 
+## string to list
+[How to convert a string to a list in Python?](https://stackoverflow.com/questions/5387208/how-to-convert-a-string-to-a-list-in-python/5387227)
+```python
+s = "abc"
+print(list(s)) # ['a', 'b', 'c']
+```
+
 ## to check the layers of a hdf5 weight file
 ```python
 import h5py
