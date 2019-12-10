@@ -936,6 +936,22 @@ crop_img = img[y:y+h, x:x+w].copy()
 cv2.imshow("cropped", crop_img); cv2.waitKey(0); cv2.destroyAllWindows()
 ```
 
+## get image size without loading image
+[Get Image size WITHOUT loading image into memory](https://stackoverflow.com/questions/15800704/get-image-size-without-loading-image-into-memory)
+```python
+import magic
+
+t = magic.from_file('tmp.jpg')
+t
+# 'JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 200x130, frames 3'
+re.findall('(\d+)x(\d+)', t)
+# [('1', '1'), ('200', '130')]
+re.findall('(\d+)x(\d+)', t)[-1]
+# ('200', '130')
+tuple(map(int, re.findall('(\d+)x(\d+)', t)[-1]))
+# (200, 130)
+```
+
 ## convert string to datetime
 ```python
 from datetime import datetime
