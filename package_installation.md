@@ -48,3 +48,9 @@ Mac:
 ```sh
 pip install python-magic-bin
 ```
+
+## glob
+[How to install the 'glob' module?](https://stackoverflow.com/questions/42964691/how-to-install-the-glob-module)
+```sh
+pip install glob3
+```
