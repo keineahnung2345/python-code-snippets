@@ -31,7 +31,20 @@ pip install <package-name>==
 ```
 
 ## opencv
+Linux:
 ```bash
 apt update -y && apt install -y libsm6 libxext6 libxrender-dev libglib2.0-0
 pip install opencv-python
+```
+
+## magic
+[ImportError: failed to find libmagic](https://github.com/tyiannak/pyAudioAnalysis/issues/128)
+
+Linux:
+```sh
+pip install python-magic
+```
+Mac:
+```sh
+pip install python-magic-bin
 ```
