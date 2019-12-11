@@ -54,3 +54,9 @@ pip install python-magic-bin
 ```sh
 pip install glob3
 ```
+
+## gpustat
+[wookayin/gpustat](https://github.com/wookayin/gpustat)
+```sh
+pip install gpustat
+```
