@@ -33,6 +33,7 @@ print(sum(f.stat().st_size for f in root_directory.glob('**/*') if f.is_file() )
 
 ## get directory name & file name from full path
 [Extract a part of the filepath (a directory) in Python](https://stackoverflow.com/questions/10149263/extract-a-part-of-the-filepath-a-directory-in-python)
+
 ```python
 import os
 
@@ -41,6 +42,15 @@ os.path.dirname(fname) #'/xxx/yyy/zzz'
 os.path.basename(fname) #'log.txt'
 ```
 
+## get file name without extension
+[How to get the filename without the extension from a path in Python?](https://stackoverflow.com/questions/678236/how-to-get-the-filename-without-the-extension-from-a-path-in-python)
+```python
+import os
+
+fname = "/xxx/yyy/zzz/log.txt"
+os.path.splitext(fname)[0] #'/xxx/yyy/zzz/log'
+os.path.splitext(os.path.basename(fname))[0] #'log'
+```
 
 ## mkdir -p
 ```python
