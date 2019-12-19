@@ -946,6 +946,24 @@ crop_img = img[y:y+h, x:x+w].copy()
 cv2.imshow("cropped", crop_img); cv2.waitKey(0); cv2.destroyAllWindows()
 ```
 
+## opencv: resize image
+```python
+import numpy as np
+import cv2
+
+arr = np.arange(10, dtype='uint8').reshape(2,5,1)
+print(arr.shape) # (2, 5, 1)
+arr_resized = cv2.resize(arr, (2,5))
+print(arr_resized.shape) # (5, 2)
+```
+The reason for 'uint8': [\resize.cpp:3787: error: (-215:Assertion failed) func != 0 in function 'cv::hal::resize'](https://stackoverflow.com/questions/55087860/resize-cpp3787-error-215assertion-failed-func-0-in-function-cvhal)
+
+Notice the dimension order!
+```
+(numpy array).shape: (h, w, c)
+cv2.resize((numpy array), (w, h))
+```
+
 ## get image size without loading image
 [Get Image size WITHOUT loading image into memory](https://stackoverflow.com/questions/15800704/get-image-size-without-loading-image-into-memory)
 ```python
