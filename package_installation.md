@@ -18,6 +18,12 @@ python get-pip.py
 # pip install -U pip # Linux
 ```
 
+## check package version
+[How to check version of python modules?](https://stackoverflow.com/questions/20180543/how-to-check-version-of-python-modules)
+```bash
+pip freeze | grep <package-name>
+```
+
 ## pip search
 pip search: search for PyPI packages whose name or summary contains
 ```bash
