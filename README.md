@@ -198,6 +198,15 @@ plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.show()
 ```
 
+## get N largest values from a list
+[Python: take max N elements from some list](https://stackoverflow.com/questions/4215472/python-take-max-n-elements-from-some-list)
+```python
+import heapq
+
+print(heapq.nlargest(3, [10, 5, 3, 8, 4, 2]))
+# [10, 8, 5]
+```
+
 ## from two list to a list of tuples
 https://stackoverflow.com/questions/2407398/how-to-merge-lists-into-a-list-of-tuples
 ```python
