@@ -921,6 +921,43 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
+## opencv: extract width, height, fps, fourcc from a video
+The code of `decode_fourcc` is from [What is the opposite of cv2.VideoWriter_fourcc?](https://stackoverflow.com/questions/49138457/what-is-the-opposite-of-cv2-videowriter-fourcc).
+
+```python
+import cv2
+
+def decode_fourcc(cc):
+    return "".join([chr((int(cc) >> 8 * i) & 0xFF) for i in range(4)])
+
+cap = cv2.VideoCapture("test_video.mp4")
+
+width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+#print(cv2.CAP_PROP_FRAME_WIDTH, cv2.CAP_PROP_FRAME_HEIGHT) # 3, 4
+print('width, height: {}, {}'.format(width, height))
+
+fps = round(cap.get(cv2.CAP_PROP_FPS))
+print('fps: ', fps)
+
+fourcc = int(cap.get(cv2.CAP_PROP_FOURCC))
+print('fourcc: ', fourcc)
+
+decoded_fourcc = decode_fourcc(fourcc)
+print('decoded fourcc: ', decoded_fourcc)
+
+encoded_fourcc = cv2.VideoWriter_fourcc(*decoded_fourcc)
+print('encoded_fourcc: ', encoded_fourcc)
+```
+Sample output:
+```
+width, height: 1280, 720
+fps:  30
+fourcc:  828601953
+decoded fourcc:  avc1
+encoded_fourcc:  828601953
+```
+
 ## opencv: from video into images
 [Python - Extracting and Saving Video Frames](https://stackoverflow.com/questions/33311153/python-extracting-and-saving-video-frames)
 
