@@ -886,13 +886,39 @@ pbar.close() #here!
 
 ## opencv: capture image from camera and then close camera
 [Capturing a single image from my webcam in Java or Python](https://stackoverflow.com/questions/11094481/capturing-a-single-image-from-my-webcam-in-java-or-python)
+
+[Read, Write and Display a video using OpenCV ( C++/ Python )](https://www.learnopencv.com/read-write-and-display-a-video-using-opencv-cpp-python/)
 ```python
 from cv2 import VideoCapture
 
 # initialize the camera
-cam = VideoCapture(0)   # 0 -> index of camera
-res, img = cam.read()
-cam.release() # close camera
+cap = VideoCapture(0)   # 0 -> index of camera
+
+# Check if camera opened successfully
+if (cap.isOpened()== False):
+    print("Error opening video stream or file")
+
+# Read until video is completed
+while(cap.isOpened()):
+    # Capture frame-by-frame
+    ret, frame = cap.read()
+    if ret == True:
+        # Display the resulting frame
+        cv2.imshow('Frame',frame)
+
+        # Press Esc on keyboard to exit
+        key_pressed = cv2.waitKey(1)
+        if key_pressed == 27:
+            break
+    # Break the loop
+    else:
+        break
+
+# When everything done, release the video capture object
+cap.release()
+
+# Closes all the frames
+cv2.destroyAllWindows()
 ```
 
 ## opencv: from video into images
