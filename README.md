@@ -358,6 +358,14 @@ d = {0:1, 1:4, 2:7, 3:1, 4:9, 5:2}
 print(dict(zip(d.keys(), [1]*len(d))))
 ```
 
+## dict.get
+Use `dict.get` so that there won't be an error when the key doesn't exist in the dict.
+```python
+d = {'a': 1}
+d.get('a') # 1
+d.get('b') # None
+```
+
 ## defaultdict
 ```python
 from collections import defaultdict
