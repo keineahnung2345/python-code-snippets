@@ -922,7 +922,9 @@ cv2.destroyAllWindows()
 ```
 
 ## opencv: extract width, height, fps, fourcc from a video
-The code of `decode_fourcc` is from [What is the opposite of cv2.VideoWriter_fourcc?](https://stackoverflow.com/questions/49138457/what-is-the-opposite-of-cv2-videowriter-fourcc).
+Ref: [What is the opposite of cv2.VideoWriter_fourcc?](https://stackoverflow.com/questions/49138457/what-is-the-opposite-of-cv2-videowriter-fourcc)
+
+[Get video dimension in python-opencv](https://stackoverflow.com/questions/39953263/get-video-dimension-in-python-opencv/39953739)
 
 ```python
 import cv2
@@ -940,6 +942,9 @@ print('width, height: {}, {}'.format(width, height))
 fps = round(cap.get(cv2.CAP_PROP_FPS))
 print('fps: ', fps)
 
+frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+print('frame count: ', frame_count)
+
 fourcc = int(cap.get(cv2.CAP_PROP_FOURCC))
 print('fourcc: ', fourcc)
 
@@ -953,6 +958,7 @@ Sample output:
 ```
 width, height: 1280, 720
 fps:  30
+frame count:  201
 fourcc:  828601953
 decoded fourcc:  avc1
 encoded_fourcc:  828601953
