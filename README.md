@@ -955,6 +955,7 @@ import cv2
 
 img = cv2.imread("xxx.jpg")
 cv2.rectangle(img, (20, 60), (120, 160), (0, 255, 0), 2)
+# cv2.waitKey(0): pause infinitely
 cv2.imshow("image", img); cv2.waitKey(0); cv2.destroyAllWindows()
 ```
 
