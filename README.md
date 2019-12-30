@@ -919,7 +919,10 @@ width, height = (1280,720)
 
 extension = ".mp4"
 if extension.endswith("avi"):
+    # for Mac
     fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+    # for linux
+    # fourcc = cv2.VideoWriter_fourcc(0x00000021)
 elif extension.endswith("mp4"):
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 videoWriter=cv2.VideoWriter("xxx.avi", fourcc, fps, (width, height))
