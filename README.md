@@ -453,6 +453,24 @@ print("{0:.2f}".format(f))
 # 123.46
 ```
 
+## json: read and write
+[Python JSON](https://www.w3schools.com/python/python_json.asp)
+```python
+import json
+
+data = {"name": ["John", "Mary", "Kevin"],
+        "area": ["London", "Munich", "Berlin"],
+        "age":  [33, 56, 44]}
+
+with open("db.json", "w") as f:
+    json.dump(data, f, indent=4)
+
+with open("db.json", "r") as f:
+    data = json.load(f)
+
+print(data)
+```
+
 ## argparse: add positional argument and optional argument, argument with default value
 [Python argparse: default value or specified value](https://stackoverflow.com/questions/15301147/python-argparse-default-value-or-specified-value)
 ```python
