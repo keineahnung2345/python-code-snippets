@@ -451,8 +451,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument("pos1")
 parser.add_argument("-o1", "--optional1", dest="o1")
 # remove "--optional1", and we don't need 'dest="o2"!'
-parser.add_argument("-o2")
+parser.add_argument("-o2", help="optional argument 2")
 parser.add_argument("-i1", dest="i1", type=int, default=0)
+parser.add_argument("-b1", action=store_true, help="pass -b1 will make b1 be true, otherwise it's false")
 args = parser.parse_args()
 pos1 = args.pos1
 o1 = args.o1
