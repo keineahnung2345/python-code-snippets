@@ -198,6 +198,17 @@ plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.show()
 ```
 
+## list: pop, remove, clear
+```python
+l = ['a', 'b', 'c', 'd']
+l.pop(1) #'b'
+print(l) #['a', 'c', 'd']
+l.remove('d')
+print(l) # ['a', 'c']
+l.clear()
+print(l) # []
+```
+
 ## get N largest values from a list
 [Python: take max N elements from some list](https://stackoverflow.com/questions/4215472/python-take-max-n-elements-from-some-list)
 ```python
