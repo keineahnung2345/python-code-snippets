@@ -66,3 +66,9 @@ pip install glob3
 ```sh
 pip install gpustat
 ```
+
+## yaml
+[How do I install the yaml package for Python?](https://stackoverflow.com/questions/14261614/how-do-i-install-the-yaml-package-for-python)
+```sh
+pip install pyyaml
+```
