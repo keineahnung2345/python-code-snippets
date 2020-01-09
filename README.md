@@ -792,6 +792,16 @@ a = np.array([1, np.nan, 3, 4])
 print(a[~np.isnan(a)]) # array([1., 3., 4.])
 ```
 
+## numpy: convert numpy array to list
+[NumPy array is not JSON serializable](https://stackoverflow.com/questions/26646362/numpy-array-is-not-json-serializable)
+```python
+import numpy as np
+
+x = np.zeros((2,3,4))
+x = x.tolist()
+```
+After it's converted to list, it can be serialized.
+
 ## re: search for text between two strings
 [Match text between two strings with regular expression](https://stackoverflow.com/questions/32680030/match-text-between-two-strings-with-regular-expression)
 ```python
