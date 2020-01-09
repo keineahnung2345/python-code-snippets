@@ -850,6 +850,17 @@ array([[1, 2],
 """
 ```
 
+## numpy: norm
+[numpy.linalg.norm](https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html)
+```python
+from numpy import linalg as LA
+
+x = np.random.rand(10, 128)
+LA.norm(x, axis=1)
+# array([6.75208915, 6.16545501, 6.20106749, 6.76831967, 6.84324319,
+       5.9553995 , 6.48986205, 6.66884094, 6.62251865, 6.59760121])
+```
+
 ## re: search for text between two strings
 [Match text between two strings with regular expression](https://stackoverflow.com/questions/32680030/match-text-between-two-strings-with-regular-expression)
 ```python
