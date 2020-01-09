@@ -806,9 +806,39 @@ After it's converted to list, it can be serialized.
 [numpy.full](https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.full.html)
 ```python
 import numpy as np
+
 x = np.full((2,3), 'a')
 # array([['a', 'a', 'a'],
        ['a', 'a', 'a']], dtype='<U1')
+```
+
+## numpy: copy an array multiple times
+[numpy.tile](https://docs.scipy.org/doc/numpy/reference/generated/numpy.tile.html#numpy.tile)
+```python
+import numpy as np
+
+# this copy the whole array 3 times
+x = np.array([[1,2],[3,4]])
+np.tile(x, (3,1))
+"""
+array([[1, 2],
+       [3, 4],
+       [1, 2],
+       [3, 4],
+       [1, 2],
+       [3, 4]])
+"""
+
+# this copy each row 3 times
+np.repeat(x, 3, axis=0)
+"""
+array([[1, 2],
+       [1, 2],
+       [1, 2],
+       [3, 4],
+       [3, 4],
+       [3, 4]])
+"""
 ```
 
 ## re: search for text between two strings
