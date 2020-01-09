@@ -802,6 +802,15 @@ x = x.tolist()
 ```
 After it's converted to list, it can be serialized.
 
+## numpy: fill array with a value
+[numpy.full](https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.full.html)
+```python
+import numpy as np
+x = np.full((2,3), 'a')
+# array([['a', 'a', 'a'],
+       ['a', 'a', 'a']], dtype='<U1')
+```
+
 ## re: search for text between two strings
 [Match text between two strings with regular expression](https://stackoverflow.com/questions/32680030/match-text-between-two-strings-with-regular-expression)
 ```python
