@@ -298,6 +298,15 @@ mylist = [20, 30, 25, 20]
 print([k for k,v in Counter(mylist).items() if v>1]) # [20]
 ```
 
+## random: random float in a given range
+[How to get a random number between a float range?](https://stackoverflow.com/questions/6088077/how-to-get-a-random-number-between-a-float-range)
+```python
+import random
+
+random.uniform(1.5, 1.9)
+# 1.8892901892967993
+```
+
 ## weighted version of random.choice
 [A weighted version of random.choice](https://stackoverflow.com/questions/3679694/a-weighted-version-of-random-choice)
 ```python
