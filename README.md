@@ -808,6 +808,8 @@ import numpy as np
 
 x = np.zeros((2,3,4))
 x = x.tolist()
+# [[[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0]], [[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0]]]
+# Note that the array's shape doesn't change
 ```
 After it's converted to list, it can be serialized.
 
