@@ -893,6 +893,14 @@ re.split(" |, ", s)
 # ['0', '0.59', '0.73', '0.43', '-0.36', '0.00', '0.07', '0.09']
 ```
 
+## re: remove redundant spaces
+[Simple way to remove multiple spaces in a string?](https://stackoverflow.com/questions/1546226/simple-way-to-remove-multiple-spaces-in-a-string)
+```python
+import re
+s = "hello    goodbye hey!"
+s = re.sub(' +', ' ', s) # 'hello goodbye hey!'
+```
+
 ## requests: post data
 ```python
 import requests
