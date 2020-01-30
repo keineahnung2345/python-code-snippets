@@ -43,6 +43,12 @@ apt update -y && apt install -y libsm6 libxext6 libxrender-dev libglib2.0-0
 pip install opencv-python
 ```
 
+## PIL
+[Installing PIL with pip](https://stackoverflow.com/questions/20060096/installing-pil-with-pip)
+```python
+python3 -m pip install Pillow
+```
+
 ## magic
 [ImportError: failed to find libmagic](https://github.com/tyiannak/pyAudioAnalysis/issues/128)
 
