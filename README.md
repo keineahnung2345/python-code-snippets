@@ -874,6 +874,38 @@ s = "onedir/123.xml"
 re.search(r'\/(.*?)\.', s).group(1) #123
 ```
 
+```python
+import re
+
+s = """    {"Convolution", parseConvolution},
+    {"Pooling", parsePooling},
+    {"InnerProduct", parseInnerProduct},
+    {"ReLU", parseReLU},
+    {"Softmax", parseSoftMax},
+    {"SoftmaxWithLoss", parseSoftMax},
+    {"LRN", parseLRN},
+    {"Power", parsePower},
+    {"Eltwise", parseEltwise},
+    {"Concat", parseConcat},
+    {"Deconvolution", parseDeconvolution},
+    {"Sigmoid", parseSigmoid},
+    {"TanH", parseTanH},
+    {"BatchNorm", parseBatchNormalization},
+    {"Scale", parseScale},
+    {"Crop", parseCrop},
+    {"Reduction", parseReduction},
+    {"Reshape", parseReshape},
+    {"Permute", parsePermute},
+    {"ELU", parseELU},
+    {"BNLL", parseBNLL},
+    {"Clip", parseClip},
+    {"AbsVal", parseAbsVal},
+    {"PReLU", parsePReLU}"""
+
+l = re.findall(r'"(.*)"', s)
+print(l) # ['Convolution', 'Pooling', 'InnerProduct', 'ReLU', 'Softmax', 'SoftmaxWithLoss', 'LRN', 'Power', 'Eltwise', 'Concat', 'Deconvolution', 'Sigmoid', 'TanH', 'BatchNorm', 'Scale', 'Crop', 'Reduction', 'Reshape', 'Permute', 'ELU', 'BNLL', 'Clip', 'AbsVal', 'PReLU']
+```
+
 ## re: find all digits, including floating points
 [if i use re.findall How to register in order not to separate the point](https://stackoverflow.com/questions/44703436/if-i-use-re-findall-how-to-register-in-order-not-to-separate-the-point/44703493)
 ```python
