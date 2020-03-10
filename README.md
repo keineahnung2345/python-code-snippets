@@ -1,6 +1,15 @@
 # python-code-snippets
 Some useful python code snippets
 
+## read input until EOF
+[How to read user input until EOF?](https://stackoverflow.com/questions/21235855/how-to-read-user-input-until-eof/36237166)
+```python
+from sys import stdin
+
+for line in stdin:
+    print(line)
+```
+
 ## detect python version inside python kernel
 ```python
 import sys
