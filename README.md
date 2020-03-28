@@ -413,6 +413,17 @@ print(d2) #defaultdict(<function <lambda> at 0x1106c6e18>, {'a': 1})
 d3 = defaultdict(int)
 d3['a'] += 1
 print(d3) #defaultdict(<class 'int'>, {'a': 1})
+
+# iterate
+for k, v in d.items():
+    print(k, v)
+```
+
+## defaultdict of defaultdict
+```python
+from collections import defaultdict
+
+d = defaultdict(lambda: defaultdict(int))
 ```
 
 ## sum up two dict
