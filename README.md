@@ -883,6 +883,21 @@ LA.norm(x, axis=1)
        5.9553995 , 6.48986205, 6.66884094, 6.62251865, 6.59760121])
 ```
 
+## enumerate all combinations to split an array
+[Split an array in all possible combinations (not regular splitting)](https://stackoverflow.com/questions/45780190/split-an-array-in-all-possible-combinations-not-regular-splitting)
+
+```python
+from itertools import combinations
+import numpy as np
+
+array = [1,2,3,4]
+[np.split(array, idx) 
+    for n_splits in range(len(array)+1)
+    for idx in combinations(range(1, len(array)), n_splits)]
+
+# [[array([1, 2, 3, 4])], [array([1]), array([2, 3, 4])], [array([1, 2]), array([3, 4])], [array([1, 2, 3]), array([4])], [array([1]), array([2]), array([3, 4])], [array([1]), array([2, 3]), array([4])], [array([1, 2]), array([3]), array([4])], [array([1]), array([2]), array([3]), array([4])]]
+```
+
 ## re: search for text between two strings
 [Match text between two strings with regular expression](https://stackoverflow.com/questions/32680030/match-text-between-two-strings-with-regular-expression)
 ```python
