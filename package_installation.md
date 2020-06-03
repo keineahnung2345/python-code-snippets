@@ -36,6 +36,13 @@ pip search <package-name>
 pip install <package-name>==
 ```
 
+## matplotlib
+```python
+python3 -m pip install matplotlib
+# to solve ImportError: No module named '_tkinter'
+apt-get install python3-tk
+```
+
 ## opencv
 Linux:
 ```bash
