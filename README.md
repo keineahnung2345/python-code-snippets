@@ -941,6 +941,15 @@ l = re.findall(r'"(.*)"', s)
 print(l) # ['Convolution', 'Pooling', 'InnerProduct', 'ReLU', 'Softmax', 'SoftmaxWithLoss', 'LRN', 'Power', 'Eltwise', 'Concat', 'Deconvolution', 'Sigmoid', 'TanH', 'BatchNorm', 'Scale', 'Crop', 'Reduction', 'Reshape', 'Permute', 'ELU', 'BNLL', 'Clip', 'AbsVal', 'PReLU']
 ```
 
+## re: check if a string is float
+[Checking if a string can be converted to float in Python](https://stackoverflow.com/questions/736043/checking-if-a-string-can-be-converted-to-float-in-python)
+```python
+import re
+
+def is_float(s):
+    return re.match(r'^-?\d+(?:\.\d+)?$', s) is not None
+```
+
 ## re: find all digits, including floating points
 [if i use re.findall How to register in order not to separate the point](https://stackoverflow.com/questions/44703436/if-i-use-re-findall-how-to-register-in-order-not-to-separate-the-point/44703493)
 ```python
