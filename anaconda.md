@@ -30,3 +30,9 @@ For example:
 ```sh
 conda config --set remote_connect_timeout_secs 60.0
 ```
+
+## conda install too slow
+[solving environment for 6 hours](https://github.com/conda/conda/issues/7690#issuecomment-451582942)
+```sh
+conda install --override-channels -c main -c conda-forge <package-name>
+```
