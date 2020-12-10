@@ -1034,6 +1034,14 @@ from glob import glob
 glob("/base_dir/**/*.txt", recursive=True)
 ```
 
+## glob: search only second level sub-folders
+[Is there a one-liner to list a directory two levels deep where the second level is an only-child, but not known?](https://stackoverflow.com/questions/4821331/is-there-a-one-liner-to-list-a-directory-two-levels-deep-where-the-second-level)
+```python
+from glob import glob
+
+glob("base_dir" + "\*\*.txt")
+```
+
 ## glob: get hidden files
 [Python 3.6 glob include hidden files and folders](https://stackoverflow.com/questions/49047402/python-3-6-glob-include-hidden-files-and-folders)
 ```python
