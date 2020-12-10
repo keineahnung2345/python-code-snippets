@@ -883,6 +883,14 @@ LA.norm(x, axis=1)
        5.9553995 , 6.48986205, 6.66884094, 6.62251865, 6.59760121])
 ```
 
+## numpy: multiply two vector and get a matrix
+[How to multiply two vector and get a matrix?](https://stackoverflow.com/questions/28578302/how-to-multiply-two-vector-and-get-a-matrix)
+```python
+numpy.outer(numpy.array([1, 2]), numpy.array([3, 4]))
+#array([[3, 4],
+#       [6, 8]])
+```
+
 ## enumerate all combinations to split an array
 [Split an array in all possible combinations (not regular splitting)](https://stackoverflow.com/questions/45780190/split-an-array-in-all-possible-combinations-not-regular-splitting)
 
