@@ -366,6 +366,18 @@ sorted_d = sorted(d.items(), key=operator.itemgetter(0), reverse=True)
 sorted_d
 ```
 
+[How do I sort a dictionary by value?](https://stackoverflow.com/questions/613183/how-do-i-sort-a-dictionary-by-value)
+
+python dict preserves insertion order(Python3.7+)!
+
+```python
+x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+# {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+
+dict(sorted(x.items(), key=lambda item: item[1]))
+# {0: 0, 2: 1, 1: 2, 4: 3, 3: 4}
+```
+
 ## pretty print a dict
 ```python
 import pprint
