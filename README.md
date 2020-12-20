@@ -763,6 +763,13 @@ for fimg in fimgs:
     plt.close()
 ```
 
+## numpy: read csv
+[How do I read CSV data into a record array in NumPy?](https://stackoverflow.com/questions/3518778/how-do-i-read-csv-data-into-a-record-array-in-numpy)
+```python
+# the delimiter in a.txt can be ',' or ', '
+np.genfromtxt('a.txt', delimiter=',')
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
