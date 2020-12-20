@@ -1104,6 +1104,17 @@ while len(l) > 0:
 pbar.close() #here!
 ```
 
+## bisect
+find the index of the element just greater than x
+```python
+import bisect
+
+l = [0, 1]
+bisect.bisect_right(l, 0)   #1
+bisect.bisect_right(l, 0.3) #1
+bisect.bisect_right(l, 1)   #2
+```
+
 ## opencv: capture image from camera and then close camera
 [Capturing a single image from my webcam in Java or Python](https://stackoverflow.com/questions/11094481/capturing-a-single-image-from-my-webcam-in-java-or-python)
 
