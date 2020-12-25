@@ -910,6 +910,22 @@ numpy.outer(numpy.array([1, 2]), numpy.array([3, 4]))
 #       [6, 8]])
 ```
 
+## numpy: use list as indices
+[How to filter numpy array by list of indices?](https://stackoverflow.com/questions/19821425/how-to-filter-numpy-array-by-list-of-indices)
+```python
+arr = np.arange(15).reshape((3,5))
+np.take(arr, [1,3], axis=1)
+#array([[ 1,  3],
+#       [ 6,  8],
+#       [11, 13]])
+```
+
+## numpy: add new axis
+
+```python
+arr = arr[..., np.newaxis]
+```
+
 ## enumerate all combinations to split an array
 [Split an array in all possible combinations (not regular splitting)](https://stackoverflow.com/questions/45780190/split-an-array-in-all-possible-combinations-not-regular-splitting)
 
