@@ -770,6 +770,14 @@ for fimg in fimgs:
 np.genfromtxt('a.txt', delimiter=',')
 ```
 
+## numpy: save csv
+[python numpy.savetxt header has extra character #](https://stackoverflow.com/questions/36210977/python-numpy-savetxt-header-has-extra-character/36211002)
+```python
+np.savetxt(resfname, result, delimiter=',', 
+            header="idx1,idx2,t_x,t_y,t_z,q_w,q_x,q_y,q_z",
+            fmt='%i,%i,%f,%f,%f,%f,%f,%f,%f')
+```
+
 ## numpy: delete element by index/value
 ```python
 import numpy as np
