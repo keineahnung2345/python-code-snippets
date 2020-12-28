@@ -494,6 +494,16 @@ print("{0:.2f}".format(f))
 # 123.46
 ```
 
+## partially format string
+[partial string formatting](https://stackoverflow.com/questions/11283961/partial-string-formatting)
+```python
+from functools import partial
+
+fname = "{s}_{t}_{i}.txt".format
+fname_p = partial(fname, s=0, t=123)
+fname_p(i="pca")
+```
+
 ## json: read and write
 [Python JSON](https://www.w3schools.com/python/python_json.asp)
 ```python
