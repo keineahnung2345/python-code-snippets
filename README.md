@@ -773,6 +773,12 @@ for fimg in fimgs:
     plt.close()
 ```
 
+## numpy: print without brackets
+[How to print a Numpy array without brackets?](https://stackoverflow.com/questions/9360103/how-to-print-a-numpy-array-without-brackets)
+```python
+np.savetxt(sys.stdout, arr)
+```
+
 ## numpy: read csv
 [How do I read CSV data into a record array in NumPy?](https://stackoverflow.com/questions/3518778/how-do-i-read-csv-data-into-a-record-array-in-numpy)
 ```python
