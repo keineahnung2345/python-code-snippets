@@ -781,9 +781,13 @@ np.savetxt(sys.stdout, arr)
 
 ## numpy: read csv
 [How do I read CSV data into a record array in NumPy?](https://stackoverflow.com/questions/3518778/how-do-i-read-csv-data-into-a-record-array-in-numpy)
+
+[Prevent or dismiss 'empty file' warning in loadtxt](https://stackoverflow.com/questions/19167550/prevent-or-dismiss-empty-file-warning-in-loadtxt)
 ```python
-# the delimiter in a.txt can be ',' or ', '
-np.genfromtxt('a.txt', delimiter=',')
+with warnings.catch_warnings(): # to disable "empty file" warning
+    warnings.simplefilter("ignore")
+    # the delimiter in a.txt can be ',' or ', '
+    cloud = np.genfromtxt(fname, delimiter=' ', dtype=np.float32)
 ```
 
 ## numpy: save csv
