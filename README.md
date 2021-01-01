@@ -494,6 +494,13 @@ print("{0:.2f}".format(f))
 # 123.46
 ```
 
+## format string, zero padding
+[How to pad zeroes to a string?](https://stackoverflow.com/questions/339007/how-to-pad-zeroes-to-a-string)
+```python
+i = 5
+"{:06d}.txt".format(i) #'000005.txt'
+```
+
 ## partially format string
 [partial string formatting](https://stackoverflow.com/questions/11283961/partial-string-formatting)
 ```python
