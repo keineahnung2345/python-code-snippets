@@ -36,3 +36,9 @@ conda config --set remote_connect_timeout_secs 60.0
 ```sh
 conda install --override-channels -c main -c conda-forge <package-name>
 ```
+
+## conda uninstall package
+[Conda uninstall one package and one package only](https://stackoverflow.com/questions/38459186/conda-uninstall-one-package-and-one-package-only)
+```sh
+conda remove --force <package-name>
+```
