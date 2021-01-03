@@ -227,6 +227,15 @@ print(heapq.nlargest(3, [10, 5, 3, 8, 4, 2]))
 # [10, 8, 5]
 ```
 
+## max index and value of a list
+[Pythonic way to find maximum value and its index in a list?](https://stackoverflow.com/questions/6193498/pythonic-way-to-find-maximum-value-and-its-index-in-a-list)
+```python
+l = [5,3,8,1,9]
+
+import operator
+index, value = max(enumerate(l), key=operator.itemgetter(1)) # 4,9
+```
+
 ## from two list to a list of tuples
 https://stackoverflow.com/questions/2407398/how-to-merge-lists-into-a-list-of-tuples
 ```python
