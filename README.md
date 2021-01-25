@@ -1394,6 +1394,13 @@ print(''.join(lazy_pinyin("an-79种-已标")))
 # 'an-79zhong-yibiao'
 ```
 
+## open file explorer
+[Open explorer on a file](https://stackoverflow.com/questions/281888/open-explorer-on-a-file)
+```python
+import subprocess
+subprocess.Popen(r'explorer /select,"C:\"')
+```
+
 ## copy file
 ```python
 from shutil import copy
