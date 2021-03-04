@@ -32,6 +32,21 @@ from tqdm import tqdm_notebook as tqdm
 %matplotlib notebook
 ```
 
+## Use bash shell in jupyter notebook
+[How to write a script bash to enter multi-line input in jupyter-notebook?](https://stackoverflow.com/questions/54162361/how-to-write-a-script-bash-to-enter-multi-line-input-in-jupyter-notebook)
+```py
+!<shell-command>
+```
+
+or multiline:
+
+```py
+%%bash
+
+<shell-command1>
+<shell-command2>
+```
+
 ## Jupyter notebook spell checking
 [Spell checking in Jupyter notebook markdown cells](http://qingkaikong.blogspot.com/2018/09/spell-checking-in-jupyter-notebook.html)
 ```sh
