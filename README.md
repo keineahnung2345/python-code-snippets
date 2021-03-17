@@ -316,6 +316,12 @@ mylist = [20, 30, 25, 20]
 print([k for k,v in Counter(mylist).items() if v>1]) # [20]
 ```
 
+## unpack list, only get the firsk n elements
+[unpack the first two elements in list/tuple](https://stackoverflow.com/questions/11371204/unpack-the-first-two-elements-in-list-tuple)
+```python
+a, b, *_ = [1, 2, 3, 4, 5, 6, 7]
+```
+
 ## random: random float in a given range
 [How to get a random number between a float range?](https://stackoverflow.com/questions/6088077/how-to-get-a-random-number-between-a-float-range)
 ```python
