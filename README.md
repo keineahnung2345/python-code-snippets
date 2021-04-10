@@ -126,6 +126,18 @@ substr = "hello"
 print(str.count(substr))
 ```
 
+## string to byte array and vice versa
+
+[Best way to convert string to bytes in Python 3?](https://stackoverflow.com/questions/7585435/best-way-to-convert-string-to-bytes-in-python-3)
+
+```python
+s = "12345"
+b = str.encode(s) # b'12345'
+type(b)           # <class 'bytes'>
+s = b.decode()    # '12345'
+type(s)           # <class 'str'>
+```
+
 ## to remove non-ascii characters from a string
 ```python
 s = s.encode('ascii', errors='ignore').decode()
