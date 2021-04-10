@@ -16,6 +16,15 @@ import sys
 sys.version_info
 ```
 
+## check object size
+
+```python
+import sys
+
+s = "abcdef"
+sys.getsizeof(s) #55
+```
+
 ## check file exist
 ```python
 import os
