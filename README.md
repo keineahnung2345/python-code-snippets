@@ -1088,6 +1088,20 @@ response = requests.post("http://<ip-address>:<port>/<subpage>",
 response = eval(response.text)
 ```
 
+## requests: save binary file
+
+[How to download image using requests](https://stackoverflow.com/questions/13137817/how-to-download-image-using-requests)
+
+```python
+import requests
+import shutil
+
+response = requests.get(url, stream=True)
+if response.status_code == 200:
+    with open(fname, 'wb') as f:
+        shutil.copyfileobj(response.raw, f)
+```
+
 ## requests: send image
 This can be used with https://github.com/keineahnung2345/cpp-code-snippets/blob/master/crow/imgsave.cpp.
 ```python
