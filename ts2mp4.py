@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 """
-This script visit multiple dirs containing ts files,
-and merge them into mp4 files(one dir for one mp4 file)
+This script should be used in Windows, 
+it visits multiple dirs containing ts files,
+and merges them into mp4 files(one dir for one mp4 file)
 
 Directory structure:
 basedir
