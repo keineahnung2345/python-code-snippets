@@ -1,6 +1,13 @@
 # python-code-snippets
 Some useful python code snippets
 
+## alias python3 as python
+[How to make 'python' program command execute Python 3?](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3)
+```sh
+vim ~/.bash_aliases # add "alias python=python3"
+source ~/.bash_aliases
+```
+
 ## read input until EOF
 [How to read user input until EOF?](https://stackoverflow.com/questions/21235855/how-to-read-user-input-until-eof/36237166)
 ```python
