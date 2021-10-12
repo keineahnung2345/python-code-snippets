@@ -1457,14 +1457,14 @@ from shutil import copy
 copy(src, dst)
 ```
 
-## move file
+## move/rename file
 [How to move a file in Python](https://stackoverflow.com/questions/8858008/how-to-move-a-file-in-python)
 ```python
 import os
 import shutil
 
-os.rename("/src/file", "/dst/file")
-shutil.move("/src/file", "/dst/file")
+os.rename("/src/file", "/dst/file") # this will fail if the destination file exist
+shutil.move("/src/file", "/dst/file") # this will overwrite the destination file if it exist
 ```
 
 ## remove file
