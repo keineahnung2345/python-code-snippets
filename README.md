@@ -1459,6 +1459,8 @@ copy(src, dst)
 
 ## move/rename file
 [How to move a file in Python](https://stackoverflow.com/questions/8858008/how-to-move-a-file-in-python)
+
+[Force Overwrite in Os.Rename](https://stackoverflow.com/questions/8107352/force-overwrite-in-os-rename)
 ```python
 import os
 import shutil
