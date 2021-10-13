@@ -384,6 +384,24 @@ l = [1,2,3,2,2,2,3,4]
 print(list(filter(lambda x: x != 2, l))) # [1, 3, 3, 4]
 ```
 
+## list copy
+This will give wrong result, updating `l2` will also updates `l`:
+```python
+l = [1,2,3]
+l2 = l
+l2[0] += 1
+print(l)  # [2,2,3]
+print(l2) # [2,2,3]
+```
+This will give correct result, updating `l2` won't updates `l`:
+```python
+l = [1,2,3]
+l2 = l.copy()
+l2[0] += 1
+print(l)  # [1,2,3]
+print(l2) # [2,2,3]
+```
+
 ## invert a dict mapping
 ```python
 inv_map = {v: k for k, v in map.items()}
