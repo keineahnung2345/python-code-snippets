@@ -1454,6 +1454,15 @@ import subprocess
 subprocess.Popen(r'explorer /select,"C:\"')
 ```
 
+## run command
+[how to run an exe file with the arguments using python](https://stackoverflow.com/questions/15928956/how-to-run-an-exe-file-with-the-arguments-using-python)
+```python
+# FNULL = open(os.devnull, 'w')    #use this if you want to suppress output to stdout from the subprocess
+# subprocess.call(command, stdout=FNULL, stderr=FNULL, shell=False)
+# command = exe_path + " -i 1 -s " + '"' + my_str_arg + '"'
+subprocess.call(command)
+```
+
 ## copy file
 ```python
 from shutil import copy
