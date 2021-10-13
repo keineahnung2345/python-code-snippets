@@ -988,6 +988,11 @@ numpy.outer(numpy.array([1, 2]), numpy.array([3, 4]))
 #       [6, 8]])
 ```
 
+## numpy: arange(python "range" supporting float step size
+```python
+np.arange(0.0, 1.0, 0.1)
+```
+
 ## numpy: use list as indices
 [How to filter numpy array by list of indices?](https://stackoverflow.com/questions/19821425/how-to-filter-numpy-array-by-list-of-indices)
 ```python
