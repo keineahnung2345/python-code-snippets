@@ -562,6 +562,14 @@ i = 5
 "{:06d}.txt".format(i) #'000005.txt'
 ```
 
+## format string, space padding
+[How to pad a numeric string with zeros to the right in Python?](https://stackoverflow.com/questions/40999973/how-to-pad-a-numeric-string-with-zeros-to-the-right-in-python)
+```python
+i = 123
+j = 45
+print("[{:> 4d} {:> 4d}] message".format(i, j)) # [ 123   45] message
+```
+
 ## partially format string
 [partial string formatting](https://stackoverflow.com/questions/11283961/partial-string-formatting)
 ```python
