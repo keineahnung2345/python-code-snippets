@@ -39,6 +39,25 @@ import string
 hasattr(string, "lower") # False
 ```
 
+## get current function name
+
+[Determine function name from within that function (without using traceback)](https://stackoverflow.com/questions/5067604/determine-function-name-from-within-that-function-without-using-traceback)
+```python
+import inspect
+
+def dummy_function():
+    print(inspect.currentframe().f_code.co_name) 
+
+class dummy_class:
+    def dummy_method(self):
+        print(inspect.currentframe().f_code.co_name)
+
+dummy_function() # dummy_function
+
+c = dummy_class()
+c.dummy_method() # dummy_method
+```
+
 ## check file exist
 ```python
 import os
