@@ -32,6 +32,13 @@ s = "abcdef"
 sys.getsizeof(s) #55
 ```
 
+## check object having attribute or not
+[How to know if an object has an attribute in Python](https://stackoverflow.com/questions/610883/how-to-know-if-an-object-has-an-attribute-in-python)
+```python
+import string
+hasattr(string, "lower") # False
+```
+
 ## check file exist
 ```python
 import os
