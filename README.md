@@ -1444,6 +1444,14 @@ dt_time = datetime.strptime(s, "%H:%M:%S")
 print(dt_time) #1900-01-01 17:18:04
 ```
 
+## convert datetime to string
+[Python strftime()](https://www.programiz.com/python-programming/datetime/strftime)
+```python
+from datetime import datetime
+s_time = datetime.now().strftime("%Y%m%d-%H%M%S")
+print(s_time) #20211109-171937
+```
+
 ## sum up list of timedelta
 [How to get the sum of timedelta in Python?](https://stackoverflow.com/questions/4049825/how-to-get-the-sum-of-timedelta-in-python)
 ```python
