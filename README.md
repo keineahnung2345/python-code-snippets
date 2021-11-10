@@ -126,8 +126,15 @@ logging.info("hello") #INFO:root:hello
 ## read file with chinese in Windows
 use `utf-8-sig` encoding so that the first line won't be prefixed with `\ufeff`
 ```python
-with open('stop_words.txt', 'r', encoding='utf-8-sig') as f:
+with open('stop_words.txt', 'r', encoding='utf-8-sig', errors='ignore') as f:
     print(f.readlines())
+```
+
+## write file with chinese in Windows
+[Python3 UnicodeDecodeError with readlines() method](https://stackoverflow.com/questions/35028683/python3-unicodedecodeerror-with-readlines-method)
+```python
+with open(fname, 'w', errors='ignore') as f:
+    f.writelines(lines)
 ```
 
 ## check if a variable exists
