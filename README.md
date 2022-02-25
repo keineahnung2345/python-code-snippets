@@ -664,6 +664,13 @@ o2 = args.o2
 i1 = args.i1
 ```
 
+## pandas: get row count
+[How do I get the row count of a Pandas DataFrame?](https://stackoverflow.com/questions/15943769/how-do-i-get-the-row-count-of-a-pandas-dataframe)
+```python
+len(df.index) # slightly faster
+df.shape[0]
+```
+
 ## pandas: append new row
 ```python
 import pandas as pd
