@@ -932,6 +932,23 @@ for fimg in fimgs:
     plt.close()
 ```
 
+## matplotlib: multiple scatter plots
+[MatPlotLib: Multiple datasets on the same scatter plot](https://stackoverflow.com/questions/4270301/matplotlib-multiple-datasets-on-the-same-scatter-plot)
+```python
+import matplotlib.pyplot as plt
+
+x = range(100)
+y = range(100,200)
+fig = plt.figure()
+ax1 = fig.add_subplot(111)
+
+ax1.scatter(x[:4], y[:4], s=10, c='b', marker="s", label='first')
+ax1.scatter(x[40:],y[40:], s=10, c='r', marker="o", label='second')
+#...
+plt.legend(loc='upper left')
+plt.show()
+```
+
 ## matploblib: plot figure with Chinese characters
 [How to plot a figure with Chinese Characters in label](https://stackoverflow.com/questions/39630928/how-to-plot-a-figure-with-chinese-characters-in-label)
 ```python
