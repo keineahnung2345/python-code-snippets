@@ -1187,6 +1187,17 @@ np.take(arr, [1,3], axis=1)
 arr = arr[..., np.newaxis]
 ```
 
+## numpy: fit line and plot
+[How to plot a line of best fit in Python](https://www.kite.com/python/answers/how-to-plot-a-line-of-best-fit-in-python)
+```python
+x = np.array([1, 3, 5, 7])
+y = np.array([ 6, 3, 9, 5 ])
+m, b = np.polyfit(x, y, 1)
+plt.plot(x, y, 'o')
+plt.plot(x, m*x + b)
+plt.show()
+```
+
 ## enumerate all combinations to split an array
 [Split an array in all possible combinations (not regular splitting)](https://stackoverflow.com/questions/45780190/split-an-array-in-all-possible-combinations-not-regular-splitting)
 
