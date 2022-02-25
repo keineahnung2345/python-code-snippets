@@ -8,6 +8,20 @@ vim ~/.bash_aliases # add "alias python=python3"
 source ~/.bash_aliases
 ```
 
+## round to specific decimals
+[How to round to 2 decimals with Python?](https://stackoverflow.com/questions/20457038/how-to-round-to-2-decimals-with-python)
+```python
+import math
+
+def round_down(n, d=2):
+    d = int('1' + ('0' * d))
+    return math.floor(n * d) / d
+
+def round_up(n, d=2):
+    d = int('1' + ('0' * d))
+    return math.ceil(n * d) / d
+```
+
 ## read input until EOF
 [How to read user input until EOF?](https://stackoverflow.com/questions/21235855/how-to-read-user-input-until-eof/36237166)
 ```python
