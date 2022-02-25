@@ -712,6 +712,19 @@ df['col1'].idxmax()
 df['col1'].max()
 ```
 
+## pandas: sort by columns
+The followings are equivalent:
+```python
+df = pd.DataFrame({"score": np.random.randint(0,100,100)})
+df.sort_values(by=["score"], ignore_index=True)
+```
+
+```python
+df = pd.DataFrame({"score": np.random.randint(0,100,100)})
+df = df.sort_values(by=["score"])
+df.reset_index(drop=True)
+```
+
 ## pandas: select column names if their max values are smaller than some number
 ```python
 import pandas as pd
