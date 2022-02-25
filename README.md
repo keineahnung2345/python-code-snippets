@@ -944,6 +944,26 @@ plt.legend(loc='lower right', prop=fontP)
 plt.savefig("myfigure.png")
 ```
 
+## matplotlib: use tableau colors
+```python
+colors = [
+    "tab:blue",
+    "tab:orange",
+    "tab:green",
+    "tab:red",
+    "tab:purple",
+    "tab:brown",
+    "tab:pink",
+    "tab:gray",
+    "tab:olive",
+    "tab:cyan"
+    ]
+
+fig = plt.figure()
+ax1 = fig.add_subplot(111)
+ax1.scatter(xs, ys, c=colors[i], s=10)
+```
+
 ## numpy: print without brackets
 [How to print a Numpy array without brackets?](https://stackoverflow.com/questions/9360103/how-to-print-a-numpy-array-without-brackets)
 ```python
