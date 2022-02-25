@@ -705,6 +705,13 @@ import pandas as pd
 df_norm = (df - df.min())/(df.max() - df.min() + np.finfo(np.float32).eps)
 ```
 
+## pandas: get max value and its index in a column
+[How to find the max value of a pandas DataFrame column in Python](https://www.kite.com/python/answers/how-to-find-the-max-value-of-a-pandas-dataframe-column-in-python)
+```python
+df['col1'].idxmax()
+df['col1'].max()
+```
+
 ## pandas: select column names if their max values are smaller than some number
 ```python
 import pandas as pd
