@@ -882,6 +882,14 @@ fig.show()
 fig.savefig('xxx.png')
 ```
 
+## matplotlib: set image size
+[How do you change the size of figures drawn with Matplotlib?](https://stackoverflow.com/questions/332289/how-do-you-change-the-size-of-figures-drawn-with-matplotlib)
+```python
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8, 6), dpi=80)
+```
+
 ## matplotlib: save image
 ```python
 import matplotlib.pyplot as plt
