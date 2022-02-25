@@ -904,6 +904,25 @@ for fimg in fimgs:
     plt.close()
 ```
 
+## matploblib: plot figure with Chinese characters
+[How to plot a figure with Chinese Characters in label](https://stackoverflow.com/questions/39630928/how-to-plot-a-figure-with-chinese-characters-in-label)
+```python
+from matplotlib import font_manager
+
+fontP = font_manager.FontProperties()
+fontP.set_family('SimHei')
+fontP.set_size(14)
+
+fig = plt.figure()
+ax1 = fig.add_subplot(111)
+ax1.scatter(xs, ys, s=10, label="中文標籤")
+plt.title("中文標題", fontproperties=fontP)
+plt.xlabel("myxlabel")
+plt.ylabel("myylabel")
+plt.legend(loc='lower right', prop=fontP)
+plt.savefig("myfigure.png")
+```
+
 ## numpy: print without brackets
 [How to print a Numpy array without brackets?](https://stackoverflow.com/questions/9360103/how-to-print-a-numpy-array-without-brackets)
 ```python
