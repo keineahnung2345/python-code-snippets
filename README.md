@@ -725,6 +725,14 @@ df.to_csv('xxx.csv', mode='a', header=False, index=False)
 df.to_csv('xxx.csv', mode='a', header=False, index=False)
 ```
 
+## pandas: to csv, set float format
+[float64 with pandas to_csv](https://stackoverflow.com/questions/12877189/float64-with-pandas-to-csv)
+```python
+df.to_csv('xxx.csv', 
+    float_format='%.2f',
+    index=False, header=True)
+```
+
 ## pandas: one dataframe has a column of type list, to filter out specific elements in the lists in this dataframe
 [Find element's index in pandas Series](https://stackoverflow.com/questions/18327624/find-elements-index-in-pandas-series)
 ```python
