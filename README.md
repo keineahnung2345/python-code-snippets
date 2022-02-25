@@ -792,6 +792,12 @@ print(df[~df['countries'].isin(countries)])
 """
 ```
 
+## pandas: where
+[Python | Pandas DataFrame.where()](https://www.geeksforgeeks.org/python-pandas-dataframe-where/)
+```python
+df = df.where((df['col1']>=10) & (df['col2']<=50)).dropna()
+```
+
 ## pandas: remove duplicated row by looking at a column
 ```python
 df = pd.DataFrame({"name": ["Annie", "Brian", "Cindy", "David", "David"], "score": [90, 85, 76, 86, 87]})
