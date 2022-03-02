@@ -679,6 +679,12 @@ for i in range(3):
     df.loc[len(df)] = [i, i*2, i*3]
 ```
 
+## pandas: slice
+[Python pandas slice dataframe by multiple index ranges](https://stackoverflow.com/questions/39393856/python-pandas-slice-dataframe-by-multiple-index-ranges)
+```python
+df.iloc[np.r_[10:12, 25:28]]
+```
+
 ## pandas: read csv, combine all last columns
 This helps when the last columns of csv file may contain ','.
 ```python
