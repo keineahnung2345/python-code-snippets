@@ -909,6 +909,26 @@ fig.show()
 fig.savefig('xxx.png')
 ```
 
+## pandas/matplotlib: plot on secondary y axis
+[pandas scatterplots: how to plot data on a secondary y axis?](https://stackoverflow.com/questions/35063104/pandas-scatterplots-how-to-plot-data-on-a-secondary-y-axis)
+```python
+fig = plt.figure(figsize=(12, 9))
+ax1 = fig.add_subplot(111)
+
+df.plot(kind='line', x='x', y='y1', label='y1', ax=ax1)
+# remove label since it will cover the original one
+df.plot(kind='line', x='x', y='y2', style='.', markersize=0, secondary_y=True, ax=ax1, label='_hidden', legend=False)
+```
+
+## pandas/matplotlib: remove legend
+[How to delete legend in pandas](https://stackoverflow.com/questions/62680533/how-to-delete-legend-in-pandas)
+```python
+fig = plt.figure(figsize=(12, 9))
+ax1 = fig.add_subplot(111)
+
+df.plot(kind='line', x='x', y='y', style='.', markersize=0, ax=ax1, label='_hidden', legend=False)
+```
+
 ## matplotlib: set image size
 [How do you change the size of figures drawn with Matplotlib?](https://stackoverflow.com/questions/332289/how-do-you-change-the-size-of-figures-drawn-with-matplotlib)
 ```python
