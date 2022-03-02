@@ -1192,7 +1192,7 @@ arr = arr[..., np.newaxis]
 ```python
 x = np.array([1, 3, 5, 7])
 y = np.array([ 6, 3, 9, 5 ])
-m, b = np.polyfit(x, y, 1)
+m, b = np.polyfit(x, y, 1) # Adding `cov=True` will also return covariance matrix
 plt.plot(x, y, 'o')
 plt.plot(x, m*x + b)
 plt.show()
