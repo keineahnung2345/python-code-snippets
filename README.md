@@ -1251,6 +1251,36 @@ plt.plot(x, m*x + b)
 plt.show()
 ```
 
+## numpy: interpolate a 3D line
+
+[linear interpolation between two data points](https://stackoverflow.com/questions/38282659/linear-interpolation-between-two-data-points)
+
+Given two points (-100, -50, 0) and (0, 50, 100), this script interpolate 10 points between the line connecting them.
+
+```python
+x_range = [-100, 0]
+y_range = [-50, 50]
+z_range = [0, 100]
+ranges = [x_range, y_range, z_range]
+points = np.zeros((10, 3))
+for i in range(0, 10):
+    for j in range(3):
+        points[i, j] = np.interp(i, [0,10], ranges[j])
+```
+
+```
+array([[-100.,  -50.,    0.],
+       [ -90.,  -40.,   10.],
+       [ -80.,  -30.,   20.],
+       [ -70.,  -20.,   30.],
+       [ -60.,  -10.,   40.],
+       [ -50.,    0.,   50.],
+       [ -40.,   10.,   60.],
+       [ -30.,   20.,   70.],
+       [ -20.,   30.,   80.],
+       [ -10.,   40.,   90.]])
+```
+
 ## enumerate all combinations to split an array
 [Split an array in all possible combinations (not regular splitting)](https://stackoverflow.com/questions/45780190/split-an-array-in-all-possible-combinations-not-regular-splitting)
 
