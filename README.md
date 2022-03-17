@@ -8,6 +8,13 @@ vim ~/.bash_aliases # add "alias python=python3"
 source ~/.bash_aliases
 ```
 
+## get script's directory
+[How can I find script's directory? [duplicate]](https://stackoverflow.com/questions/4934806/how-can-i-find-scripts-directory)
+```python
+import os
+print(os.path.dirname(os.path.realpath(__file__)))
+```
+
 ## round to specific decimals
 [How to round to 2 decimals with Python?](https://stackoverflow.com/questions/20457038/how-to-round-to-2-decimals-with-python)
 ```python
