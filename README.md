@@ -118,10 +118,13 @@ os.path.splitext(os.path.basename(fname))[0] #'log'
 ```
 
 ## mkdir -p
+[How can I safely create a nested directory?](https://stackoverflow.com/questions/273192/how-can-i-safely-create-a-nested-directory)
 ```python
 import os
 # this works even when 'first_layer' doesn't exist
 os.makedirs("first_layer/second_layer")
+# succeeds even if directory exists
+os.makedirs("first_layer/second_layer", exist_ok=True)
 ```
 
 ## get the class name of an object
