@@ -252,6 +252,23 @@ for i in range(4):
 """
 ```
 
+In a function:
+
+[Find the nth occurrence of substring in a string](https://stackoverflow.com/questions/1883980/find-the-nth-occurrence-of-substring-in-a-string)
+```python
+def find_nth(haystack, needle, n):
+    start = haystack.find(needle)
+    while start >= 0 and n > 1:
+        start = haystack.find(needle, start+len(needle))
+        n -= 1
+    return start
+
+fname = "a_b_c_d_e_f.txt"
+discard_cnt = 3 # discard 3 "_"
+print(fname[:find_nth(fname, "_", fname.count("_")-(discard_cnt-1))]) # "a_b_c"
+```
+
+
 ## string range from a to z
 [Python: how to print range a-z?](https://stackoverflow.com/questions/3190122/python-how-to-print-range-a-z)
 ```python
