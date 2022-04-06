@@ -1054,6 +1054,17 @@ ax1 = fig.add_subplot(111)
 ax1.scatter(xs, ys, c=colors[i], s=10)
 ```
 
+## matplotlib: put legend right to the plot and save full image
+[Plt.show shows full graph but savefig is cropping the image](https://stackoverflow.com/questions/37427362/plt-show-shows-full-graph-but-savefig-is-cropping-the-image)
+```python
+plt.figure("your_title")
+plt.xlabel("your_xlabel")
+plt.ylabel("your_ylabel")
+plt.plot(xs, ys, '-', label="your_label")
+plt.legend(bbox_to_anchor=(1,1)) # put legend right to the plot
+plt.savefig("your_title.png", bbox_inches='tight') # otherwise it will save cropped image
+```
+
 ## numpy: print without brackets
 [How to print a Numpy array without brackets?](https://stackoverflow.com/questions/9360103/how-to-print-a-numpy-array-without-brackets)
 ```python
