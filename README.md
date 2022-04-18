@@ -1262,6 +1262,40 @@ plt.plot(x, m*x + b)
 plt.show()
 ```
 
+## skimage: use ransac to find line
+[How to fit a line using RANSAC in Cartesian coordinates?](https://stackoverflow.com/questions/59477558/how-to-fit-a-line-using-ransac-in-cartesian-coordinates)
+
+This can be used when outlier ratio is large.
+
+```python
+from skimage.measure import LineModelND, ransac
+
+x = np_x.reshape(-1, 1)
+y = np_y.reshape(-1, 1)
+
+data = np.column_stack([x, y])
+
+model = LineModelND()
+model.estimate(data)
+# robustly fit line only using inlier data with RANSAC algorithm
+residual_threshold = 0.1 # this should be tuned
+model_robust, inliers = ransac(data, LineModelND, min_samples=2,
+                               residual_threshold=residual_threshold,
+                               max_trials=1000)
+
+print("inliers: {}/{}".format(np.count_nonzero(inliers), x.size))
+
+origin, direction = model.params
+m = direction[1]/direction[0]
+b = origin[1] - origin[0] * m
+print("m: {}, b: {}".format(m, b))
+
+origin_robust, direction_robust = model_robust.params
+m_robust = direction_robust[1]/direction_robust[0]
+b_robust = origin_robust[1] - origin[0]_robust * m_robust
+print("m_robust: {}, b_robust: {}".format(m_robust, b_robust))
+```
+
 ## numpy: interpolate a 3D line
 
 [linear interpolation between two data points](https://stackoverflow.com/questions/38282659/linear-interpolation-between-two-data-points)
