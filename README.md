@@ -1079,6 +1079,13 @@ ax.set_xlim([xmin, xmax])
 ax.set_ylim([None, ymax]) # None for not setting y axis's lower limit
 ```
 
+## numpy: float to string with precision
+[Python float to string (scientific notation), in specific format](https://stackoverflow.com/questions/59091625/python-float-to-string-scientific-notation-in-specific-format)
+```python
+np.format_float_scientific(1.23456789, unique=False, exp_digits=2,precision=4)
+# '1.2346e+00'
+```
+
 ## numpy: print without brackets
 [How to print a Numpy array without brackets?](https://stackoverflow.com/questions/9360103/how-to-print-a-numpy-array-without-brackets)
 ```python
