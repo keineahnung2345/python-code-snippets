@@ -1071,6 +1071,14 @@ plt.savefig("your_title.png", bbox_inches='tight') # otherwise it will save crop
 plt.axvline(x=0.1, color='k', linestyle='--')
 ```
 
+## matplotlib: set x/y axis limit
+[setting y-axis limit in matplotlib](https://stackoverflow.com/questions/3777861/setting-y-axis-limit-in-matplotlib)
+```python
+ax = plt.gca()
+ax.set_xlim([xmin, xmax])
+ax.set_ylim([None, ymax]) # None for not setting y axis's lower limit
+```
+
 ## numpy: print without brackets
 [How to print a Numpy array without brackets?](https://stackoverflow.com/questions/9360103/how-to-print-a-numpy-array-without-brackets)
 ```python
