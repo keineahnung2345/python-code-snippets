@@ -1015,7 +1015,7 @@ plt.legend(loc='upper left')
 plt.show()
 ```
 
-## matploblib: plot figure with Chinese characters
+## matplotlib: plot figure with Chinese characters
 [How to plot a figure with Chinese Characters in label](https://stackoverflow.com/questions/39630928/how-to-plot-a-figure-with-chinese-characters-in-label)
 ```python
 from matplotlib import font_manager
@@ -1063,6 +1063,12 @@ plt.ylabel("your_ylabel")
 plt.plot(xs, ys, '-', label="your_label")
 plt.legend(bbox_to_anchor=(1,1)) # put legend right to the plot
 plt.savefig("your_title.png", bbox_inches='tight') # otherwise it will save cropped image
+```
+
+## matplotlib: draw vertical line
+[How to draw vertical lines on a given plot in matplotlib](https://stackoverflow.com/questions/24988448/how-to-draw-vertical-lines-on-a-given-plot-in-matplotlib)
+```python
+plt.axvline(x=0.1, color='k', linestyle='--')
 ```
 
 ## numpy: print without brackets
