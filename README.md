@@ -713,11 +713,18 @@ df.shape[0]
 ```
 
 ## pandas: append new row
+[Python – Pandas dataframe.append()](https://www.geeksforgeeks.org/python-pandas-dataframe-append/)
 ```python
 import pandas as pd
 df = pd.DataFrame(columns=["n", "2n", "3n"])
 for i in range(3):
     df.loc[len(df)] = [i, i*2, i*3]
+```
+
+```python
+import pandas as pd
+df = pd.DataFrame(columns=["n", "2n", "3n"])
+df = df.append({'n': 1, '2n': 2, '3n': 3}, ignore_index=True)
 ```
 
 ## pandas: slice
