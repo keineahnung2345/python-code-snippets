@@ -691,6 +691,20 @@ o2 = args.o2
 i1 = args.i1
 ```
 
+## pandas: create dataframe with only column names
+
+[Pandas create empty DataFrame with only column names](https://stackoverflow.com/questions/44513738/pandas-create-empty-dataframe-with-only-column-names)
+
+```python
+df = pd.DataFrame(columns=['A','B','C','D','E','F','G'])
+```
+
+```
+Empty DataFrame
+Columns: [A, B, C, D, E, F, G]
+Index: []
+```
+
 ## pandas: get row count
 [How do I get the row count of a Pandas DataFrame?](https://stackoverflow.com/questions/15943769/how-do-i-get-the-row-count-of-a-pandas-dataframe)
 ```python
