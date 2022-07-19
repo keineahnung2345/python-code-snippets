@@ -746,6 +746,8 @@ df['col1'].max()
 ```
 
 ## pandas: sort by columns
+[how to sort pandas dataframe from one column](https://stackoverflow.com/questions/37787698/how-to-sort-pandas-dataframe-from-one-column)
+
 The followings are equivalent:
 ```python
 df = pd.DataFrame({"score": np.random.randint(0,100,100)})
