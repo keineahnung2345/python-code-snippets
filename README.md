@@ -1919,3 +1919,35 @@ Solution: add `LD_LIBRARY_PATH` before `python3`:
 ```sh
 LD_LIBRARY_PATH=/usr/local/lib:`pwd` python3 darknet.py
 ```
+
+## operations on postgresql database
+First install `psycopg2` package
+[python3连接postgresql](https://www.jianshu.com/p/e57636147791)
+```python
+import psycopg2
+
+conn = psycopg2.connect(database="mydatabase", user="postgres", password="mypassword", host="192.168.1.1", port="5432")
+print("Opened database successfully")
+
+cur = conn.cursor()
+
+# select count(*)
+cur.execute("select count(*) from products;")
+product_count = cur.fetchall()[0][0]
+
+# get dict from id to name
+cur.execute("select id, name from students;")
+id2name = dict(cur.fetchall())
+
+# insert multiple rows at once
+insert_data = []
+# https://stackoverflow.com/questions/8134602/psycopg2-insert-multiple-rows-with-one-query
+# https://stackoverflow.com/questions/17409829/valueerror-usupported-format-character-d-with-psycopg2
+# should use %s even for integers
+# INSERT INTO table_name(column1, column2, …) VALUES (value1, value2, …);
+args_str = ','.join(cur.mogrify("(%s,%s,%s,%s,%s,%s,%s,%s)", x).decode('utf8') for x in insert_data)
+cur.execute("INSERT INTO subitems(id, category_id, author_id, source_path, result_path, project_id, status_id, created_on) VALUES " + args_str) 
+
+conn.close()
+```
+
