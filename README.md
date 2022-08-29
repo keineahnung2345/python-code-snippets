@@ -477,6 +477,7 @@ print(l2) # [2,2,3]
 ```
 
 ## invert a dict mapping
+[Swap dictionary keys and values in Python](https://note.nkmk.me/en/python-dict-swap-key-value/)
 ```python
 inv_map = {v: k for k, v in map.items()}
 ```
