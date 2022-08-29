@@ -1815,6 +1815,8 @@ print(dt_time) #1900-01-01 17:18:04
 from datetime import datetime
 s_time = datetime.now().strftime("%Y%m%d-%H%M%S")
 print(s_time) #20211109-171937
+s_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
+print(s_time) #2022-08-29 16:14:15.253220
 ```
 
 ## sum up list of timedelta
