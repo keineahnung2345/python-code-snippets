@@ -841,6 +841,16 @@ df = pd.DataFrame({"words" : [["我", "很", "好"],
 df["words"].apply(lambda x : list(filter(lambda x: x not in stop_words, x)))
 ```
 
+## pandas: filter for strings in a series
+[How to keep only strings in a dataframe column](https://stackoverflow.com/questions/33845695/how-to-keep-only-strings-in-a-dataframe-column)
+```python
+myseries = pd.Series([1,4,0,7,5])
+myseries = myseries[myseries.apply(lambda x: isinstance(x, (str, bytes)))]
+# 2       
+# 3    abc
+# dtype: object
+```
+
 ## pandas: find the index of an element in a series
 ```python
 import pandas as pd
