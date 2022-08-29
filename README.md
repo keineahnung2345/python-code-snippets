@@ -934,6 +934,7 @@ print(df.groupby(pd.cut(df["score"], [0, 60, 70, 80, 90, 100])).groups)
 ```
 
 ## pandas: iterate over rows
+[How to iterate over rows in a DataFrame in Pandas](https://stackoverflow.com/questions/16476924/how-to-iterate-over-rows-in-a-dataframe-in-pandas)
 ```python
 import pandas as pd
 
