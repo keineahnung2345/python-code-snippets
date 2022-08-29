@@ -844,10 +844,20 @@ df["words"].apply(lambda x : list(filter(lambda x: x not in stop_words, x)))
 ## pandas: filter for strings in a series
 [How to keep only strings in a dataframe column](https://stackoverflow.com/questions/33845695/how-to-keep-only-strings-in-a-dataframe-column)
 ```python
-myseries = pd.Series([1,4,0,7,5])
+myseries = pd.Series([1,2," ","abc"])
 myseries = myseries[myseries.apply(lambda x: isinstance(x, (str, bytes)))]
 # 2       
 # 3    abc
+# dtype: object
+```
+
+## pandas: filter for non-empty strings
+[Strip / trim all strings of a dataframe](https://stackoverflow.com/questions/40950310/strip-trim-all-strings-of-a-dataframe)
+```python
+myseries = pd.Series([" ","abc"])
+myseries = myseries.str.strip()
+# 0       
+# 1    abc
 # dtype: object
 ```
 
