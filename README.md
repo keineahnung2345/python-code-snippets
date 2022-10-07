@@ -1486,6 +1486,17 @@ s = "hello    goodbye hey!"
 s = re.sub(' +', ' ', s) # 'hello goodbye hey!'
 ```
 
+## parse: search for patten
+[parse - Github page](https://github.com/r1chardj0n3s/parse)
+```python
+import parse
+
+line = "[10/07 10:03:10.424] [Debug] [                 main.cpp: 281] [Connec...nt.cpp: 130:Connecti...aReceived] ConnectionClient::onDataReceived: receive 1 th packet"
+parsed = parse.search("{:d}/{:d} {:d}:{:d}:{:d}.{:d}", line)
+month, day, hour, minute, second, ms = parsed
+print(month, day, hour, minute, second, ms) # 10 7 10 3 10 424
+```
+
 ## requests: post data
 ```python
 import requests
