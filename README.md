@@ -1,6 +1,17 @@
 # python-code-snippets
 Some useful python code snippets
 
+## check python interpreter type
+[How to know that the interpreter is Jython or CPython in the code? [duplicate]](https://stackoverflow.com/questions/22305438/how-to-know-that-the-interpreter-is-jython-or-cpython-in-the-code)
+```python
+import platform
+platform.python_implementation()
+```
+
+```
+'CPython'
+```
+
 ## alias python3 as python
 [How to make 'python' program command execute Python 3?](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3)
 ```sh
