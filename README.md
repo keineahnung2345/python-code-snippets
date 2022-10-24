@@ -1156,7 +1156,8 @@ np.savetxt(sys.stdout, arr)
 with warnings.catch_warnings(): # to disable "empty file" warning
     warnings.simplefilter("ignore")
     # the delimiter in a.txt can be ',' or ', '
-    cloud = np.genfromtxt(fname, delimiter=' ', dtype=np.float32)
+    # skip first 11 lines
+    cloud = np.genfromtxt(fname, delimiter=' ', dtype=np.float32, skip_header=11)
 ```
 
 ## numpy: save csv
