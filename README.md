@@ -1176,6 +1176,12 @@ a = np.array([0,0,2,2,4,4])
 np.delete(a, 0)
 # delete by value
 np.delete(a, np.where(a==0))
+# delete along an axis
+a = np.arange(16).reshape(4,4)
+np.delete(a, 1, axis=0)
+# array([[ 0,  1,  2,  3],
+#        [ 8,  9, 10, 11],
+#        [12, 13, 14, 15]])
 ```
 
 ## numpy: get indices of N maximum values
