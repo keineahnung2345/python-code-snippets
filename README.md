@@ -1394,6 +1394,9 @@ ranges = [x_range, y_range, z_range]
 points = np.zeros((10, 3))
 for i in range(0, 10):
     for j in range(3):
+        # 1st arg: the current x coordinate
+        # 2nd arg: x coordinates
+        # 3rd arg: y coordinates
         points[i, j] = np.interp(i, [0,10], ranges[j])
 ```
 
