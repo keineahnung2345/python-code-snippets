@@ -80,6 +80,15 @@ pip install glob3
 pip install gpustat
 ```
 
+## python-ldap
+[python-ldap](https://www.python-ldap.org/en/python-ldap-3.4.3/)
+
+[ERROR: Could not build wheels for python-ldap, which is required to install pyproject.toml-based projects](https://stackoverflow.com/questions/75736939/error-could-not-build-wheels-for-python-ldap-which-is-required-to-install-pypr)
+```sh
+sudo apt install python3-dev libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev build-essential libssl-dev libffi-dev libmysqlclient-dev libjpeg-dev libpq-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev
+pip install python-ldap
+```
+
 ## yaml
 [How do I install the yaml package for Python?](https://stackoverflow.com/questions/14261614/how-do-i-install-the-yaml-package-for-python)
 ```sh
